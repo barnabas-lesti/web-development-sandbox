@@ -3,10 +3,11 @@
   "scripts": {
     "build": "turbo build",
     "clean": "git clean -Xfd",
-    "dev": "turbo dev",
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
-    "prod": "turbo prod",
+    "ng": "ng",
+    "start": "turbo start",
+    "start:ssr": "turbo start:ssr",
     "test": "turbo test"
   },
   "workspaces": [
@@ -19,6 +20,7 @@
     "npm": ">=10.7.0"
   },
   "devDependencies": {
+    "@angular/cli": "^18.2.4",
     "turbo": "^2.0.14"
   }
 }

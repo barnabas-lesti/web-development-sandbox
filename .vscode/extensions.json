@@ -4,6 +4,7 @@
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "yzhang.markdown-all-in-one",
-    "redhat.vscode-yaml"
+    "redhat.vscode-yaml",
+    "angular.ng-template"
   ]
 }

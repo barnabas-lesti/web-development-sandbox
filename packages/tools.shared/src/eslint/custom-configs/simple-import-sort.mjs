@@ -1,7 +1,5 @@
 import eslintPluginSimpleImportSort from "eslint-plugin-simple-import-sort";
 
-const PROJECT_ID = "wds";
-
 export const CUSTOM_SIMPLE_IMPORT_SORT_CONFIG = [
   {
     plugins: {
@@ -12,7 +10,14 @@ export const CUSTOM_SIMPLE_IMPORT_SORT_CONFIG = [
       "simple-import-sort/imports": [
         "error",
         {
-          groups: [["^@?\\w"], [`^@${PROJECT_ID}?\\w`], ["^\\./", "^\\.\\./"], ["^/"], ["^.+\\.(css|scss)([?].*)?$"]],
+          groups: [
+            ["^@?\\w"],
+            ["^@wds?\\w"],
+            ["^@src?\\w"],
+            ["^\\./", "^\\.\\./"],
+            ["^/"],
+            ["^.+\\.(css|scss)([?].*)?$"],
+          ],
         },
       ],
       "simple-import-sort/exports": "error",

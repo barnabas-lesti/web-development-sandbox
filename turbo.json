@@ -4,16 +4,16 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist"]
+      "outputs": [".angular", ".turbo", "dist"]
     },
-    "dev": {
+    "lint": {},
+    "lint:fix": {},
+    "start": {
       "cache": false,
       "persistent": true,
       "dependsOn": ["^build"]
     },
-    "lint": {},
-    "lint:fix": {},
-    "prod": {
+    "start:ssr": {
       "cache": false,
       "persistent": true,
       "dependsOn": ["build"]
