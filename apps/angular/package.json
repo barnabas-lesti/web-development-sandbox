@@ -1,5 +1,5 @@
 {
-  "name": "@wds/angular.client",
+  "name": "@wds/angular",
   "version": "0.0.0",
   "scripts": {
     "build": "ng build",
