@@ -1,14 +1,9 @@
-import {
-  ApplicationConfig,
-  provideZoneChangeDetection,
-  mergeApplicationConfig,
-} from "@angular/core";
+import { type ApplicationConfig, mergeApplicationConfig, provideZoneChangeDetection } from "@angular/core";
+import { provideClientHydration } from "@angular/platform-browser";
+import { provideServerRendering } from "@angular/platform-server";
 import { provideRouter } from "@angular/router";
 
 import { APP_ROUTES } from "./app.routes";
-import { provideClientHydration } from "@angular/platform-browser";
-
-import { provideServerRendering } from "@angular/platform-server";
 
 export const APP_BROWSER_CONFIG: ApplicationConfig = {
   providers: [

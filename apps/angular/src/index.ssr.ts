@@ -1,8 +1,9 @@
 import { APP_BASE_HREF } from "@angular/common";
 import { CommonEngine } from "@angular/ssr";
 import express from "express";
-import { fileURLToPath } from "node:url";
 import { dirname, join, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+
 import bootstrap from "./index.server";
 
 // The Express app is exported so that it can be used by serverless Functions.
@@ -25,7 +26,7 @@ export function app(): express.Express {
     express.static(browserDistFolder, {
       maxAge: "1y",
       index: "index.html",
-    })
+    }),
   );
 
   // All regular routes use the Angular engine
@@ -53,6 +54,7 @@ function run(): void {
   // Start up the Node server
   const server = app();
   server.listen(port, () => {
+    // eslint-disable-next-line no-console
     console.log(`Node Express server listening on http://localhost:${port}`);
   });
 }
