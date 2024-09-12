@@ -1,11 +1,2 @@
-# Generated files and folders
-.eslintcache
-.stylelintcache
-node_modules/
-vite.config.ts.*
-dist/
-.turbo/
-
-# Environment configuration files
-.env
-.env.local
+/.turbo
+/node_modules

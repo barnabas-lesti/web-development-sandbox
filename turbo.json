@@ -1,18 +1,23 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalEnv": [],
+  "ui": "tui",
   "tasks": {
     "build": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["^build"],
+      "outputs": ["dist"]
     },
     "dev": {
       "cache": false,
-      "persistent": true
-    },
-    "preview": {
-      "cache": false,
       "persistent": true,
       "dependsOn": ["^build"]
-    }
+    },
+    "lint": {},
+    "lint:fix": {},
+    "prod": {
+      "cache": false,
+      "persistent": true,
+      "dependsOn": ["build"]
+    },
+    "test": {}
   }
 }

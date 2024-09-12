@@ -1,40 +1,24 @@
 {
-  "name": "@webdev/root",
-  "description": "Playground project to test out web frameworks, patterns and more.",
-  "version": "0.0.1",
-  "type": "module",
-  "packageManager": "npm@10.7.0",
-  "engines": {
-    "node": ">=18.20.0",
-    "npm": ">=10.7.0"
+  "name": "@wds/root",
+  "scripts": {
+    "build": "turbo build",
+    "clean": "git clean -Xfd",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "lint:fix": "turbo lint:fix",
+    "prod": "turbo prod",
+    "test": "turbo test"
   },
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
-  "scripts": {
-    "build": "turbo run build",
-    "clean": "node ./tools/clean",
-    "dev": "turbo run dev",
-    "dev:js-vite": "turbo run dev --filter=\"@webdev/js-vite\"",
-    "preview": "turbo run preview",
-    "lint": "prettier . --check --cache && eslint . --cache && stylelint \"**/*.{css,scss}\" --cache",
-    "lint:fix": "prettier . --write --cache && eslint . --fix --cache && stylelint \"**/*.{css,scss}\" --cache --fix",
-    "turbo": "turbo"
+  "packageManager": "npm@10.7.0",
+  "engines": {
+    "node": ">=18.20.0",
+    "npm": ">=10.7.0"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@turbo/gen": "^2.0.6",
-    "@typescript-eslint/eslint-plugin": "^7.16.1",
-    "@typescript-eslint/parser": "^7.16.1",
-    "eslint": "^8.57.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-config-turbo": "^2.0.9",
-    "eslint-plugin-simple-import-sort": "^12.1.1",
-    "prettier": "^3.3.3",
-    "stylelint": "^15.10.3",
-    "stylelint-config-standard": "^34.0.0",
-    "typescript": "^5.3.3",
-    "turbo": "^2.0.6"
+    "turbo": "^2.0.14"
   }
 }
