@@ -1,6 +1,6 @@
 import eslint from "@eslint/js";
 
-export const CUSTOM_ESLINT_CONFIG = [
+export const ESLINT_CONFIG = [
   eslint.configs.recommended,
   {
     // https://eslint.org/docs/latest/rules/

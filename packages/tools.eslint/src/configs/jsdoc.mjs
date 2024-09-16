@@ -1,6 +1,6 @@
 import eslintPluginJSDoc from "eslint-plugin-jsdoc";
 
-export const CUSTOM_JSDOC_CONFIG = [
+export const JSDOC_ESLINT_CONFIG = [
   eslintPluginJSDoc.configs["flat/recommended-typescript"],
   {
     // https://github.com/gajus/eslint-plugin-jsdoc/tree/main/docs/rules

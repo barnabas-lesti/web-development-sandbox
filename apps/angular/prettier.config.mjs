@@ -1,3 +1,3 @@
-import { BASE_PRETTIER_CONFIG } from "@wds/tools.shared/prettier";
+import { BASE_PRETTIER_CONFIG } from "@wds/tools.prettier";
 
 export default BASE_PRETTIER_CONFIG;

@@ -1,0 +1,18 @@
+{
+  "name": "@wds/tools.prettier",
+  "version": "1.0.0",
+  "description": "Project prettier tool.",
+  "exports": {
+    ".": "./src/index.mjs"
+  },
+  "scripts": {
+    "lint": "prettier . --check",
+    "lint:fix": "prettier . --write"
+  },
+  "peerDependencies": {
+    "prettier": "3.x"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3"
+  }
+}

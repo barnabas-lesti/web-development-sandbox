@@ -1,6 +1,6 @@
 import eslintPluginUnusedImports from "eslint-plugin-unused-imports";
 
-export const CUSTOM_UNUSED_IMPORTS_CONFIG = [
+export const UNUSED_IMPORTS_ESLINT_CONFIG = [
   {
     plugins: {
       "unused-imports": eslintPluginUnusedImports,

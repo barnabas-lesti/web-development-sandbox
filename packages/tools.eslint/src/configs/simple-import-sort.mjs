@@ -1,6 +1,6 @@
 import eslintPluginSimpleImportSort from "eslint-plugin-simple-import-sort";
 
-export const CUSTOM_SIMPLE_IMPORT_SORT_CONFIG = [
+export const SIMPLE_IMPORT_SORT_ESLINT_CONFIG = [
   {
     plugins: {
       "simple-import-sort": eslintPluginSimpleImportSort,

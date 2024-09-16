@@ -1,6 +1,6 @@
 import typescriptEslint from "typescript-eslint";
 
-export const CUSTOM_TYPESCRIPT_CONFIG = [
+export const TYPESCRIPT_ESLINT_CONFIG = [
   ...typescriptEslint.configs.strict,
   ...typescriptEslint.configs.stylistic,
   {

@@ -1,16 +1,19 @@
 {
-  "name": "@wds/tools.shared",
+  "name": "@wds/tools.eslint",
   "version": "1.0.0",
-  "description": "Project build and utility tools.",
+  "description": "Project eslint tool.",
   "exports": {
-    "./prettier": "./src/prettier/index.mjs",
-    "./eslint": "./src/eslint/index.mjs"
+    ".": "./src/index.mjs"
   },
   "scripts": {
     "lint": "prettier . --check && eslint .",
     "lint:fix": "prettier . --write && eslint . --fix"
   },
+  "peerDependencies": {
+    "eslint": "9.x"
+  },
   "devDependencies": {
+    "@wds/tools.prettier": "*",
     "@eslint/js": "^9.9.1",
     "@types/eslint__js": "^8.42.3",
     "eslint": "^9.9.1",
@@ -20,7 +23,6 @@
     "eslint-plugin-unused-imports": "^4.1.3",
     "globals": "^15.9.0",
     "typescript-eslint": "^8.2.0",
-    "prettier": "^3.3.3",
     "typescript": "5.4.2"
   }
 }

@@ -1,6 +1,6 @@
 import globals from "globals";
 
-export const CUSTOM_ENVIRONMENT_CONFIG = [
+export const ENVIRONMENT_ESLINT_CONFIG = [
   {
     languageOptions: {
       globals: {
