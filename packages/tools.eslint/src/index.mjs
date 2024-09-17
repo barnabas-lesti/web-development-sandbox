@@ -1,5 +1,3 @@
-import typescriptEslint from "typescript-eslint";
-
 import { ENVIRONMENT_ESLINT_CONFIG } from "./configs/environment.mjs";
 import { ESLINT_CONFIG } from "./configs/eslint.mjs";
 import { IGNORES_ESLINT_CONFIG } from "./configs/ignores.mjs";
@@ -14,7 +12,7 @@ import { UNUSED_IMPORTS_ESLINT_CONFIG } from "./configs/unused-imports.mjs";
  *
  * https://eslint.org/docs/latest/use/configure/
  */
-export const BASE_ESLINT_CONFIG = typescriptEslint.config(
+export const BASE_ESLINT_CONFIG = [
   ...IGNORES_ESLINT_CONFIG,
   ...ESLINT_CONFIG,
   ...TYPESCRIPT_ESLINT_CONFIG,
@@ -23,4 +21,4 @@ export const BASE_ESLINT_CONFIG = typescriptEslint.config(
   ...SIMPLE_IMPORT_SORT_ESLINT_CONFIG,
   ...UNUSED_IMPORTS_ESLINT_CONFIG,
   ...PRETTIER_ESLINT_CONFIG,
-);
+];
