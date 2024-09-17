@@ -1,6 +1,5 @@
 import { Component } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
-
 import { map, of } from "rxjs";
 import { TestType } from "./app.types";
 
@@ -20,6 +19,15 @@ export class AppComponent {
 
     of(null)
       .pipe(map(() => "a"))
-      .subscribe((value) => console.log(value));
+      .subscribe(async (value) => console.log(value));
+  }
+
+  /**
+   *
+   * @param {string} value Something.
+   * @returns
+   */
+  foo(value: string) {
+    return "bar" + value;
   }
 }

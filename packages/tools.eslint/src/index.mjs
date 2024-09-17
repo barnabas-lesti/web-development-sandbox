@@ -7,6 +7,8 @@ import { SIMPLE_IMPORT_SORT_ESLINT_CONFIG } from "./configs/simple-import-sort.m
 import { TYPESCRIPT_ESLINT_CONFIG } from "./configs/typescript.mjs";
 import { UNUSED_IMPORTS_ESLINT_CONFIG } from "./configs/unused-imports.mjs";
 
+export { RXJS_ESLINT_CONFIG } from "./configs/rxjs.mjs";
+
 /**
  * Project base eslint configuration.
  *
