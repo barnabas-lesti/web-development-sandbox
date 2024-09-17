@@ -1,14 +1,14 @@
 // @ts-check
 
 import eslint from "@eslint/js";
-import typescriptEslint from "typescript-eslint";
 
 /**
  * Base eslint configuration.
  *
  * https://eslint.org/docs/latest/use/configure/
+ * @type {import('typescript-eslint').ConfigWithExtends[]}
  */
-export const ESLINT_CONFIG = typescriptEslint.config(
+export const ESLINT_CONFIG = [
   { ignores: ["node_modules", ".turbo", "dist"] },
   {
     extends: [eslint.configs.recommended],
@@ -26,4 +26,4 @@ export const ESLINT_CONFIG = typescriptEslint.config(
       ],
     },
   },
-);
+];

@@ -1,14 +1,14 @@
 // @ts-check
 
 import angularEslint from "angular-eslint";
-import typescriptEslint from "typescript-eslint";
 
 /**
  * Angular framework related eslint configuration.
  *
  * https://github.com/angular-eslint/angular-eslint
+ * @type {import('typescript-eslint').ConfigWithExtends[]}
  */
-export const ANGULAR_ESLINT_CONFIG = typescriptEslint.config(
+export const ANGULAR_ESLINT_CONFIG = [
   { ignores: [".angular"] },
   {
     files: ["**/*.ts"],
@@ -41,4 +41,4 @@ export const ANGULAR_ESLINT_CONFIG = typescriptEslint.config(
       "@angular-eslint/template/prefer-self-closing-tags": "error",
     },
   },
-);
+];

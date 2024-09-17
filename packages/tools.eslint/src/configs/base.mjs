@@ -1,3 +1,5 @@
+// @ts-check
+
 import { ENVIRONMENT_ESLINT_CONFIG } from "./environment.mjs";
 import { ESLINT_CONFIG } from "./eslint.mjs";
 import { JSDOC_ESLINT_CONFIG } from "./jsdoc.mjs";
@@ -8,6 +10,7 @@ import { UNUSED_IMPORTS_ESLINT_CONFIG } from "./unused-imports.mjs";
 
 /**
  * Base project eslint configuration bundle.
+ * @type {import('typescript-eslint').ConfigWithExtends[]}
  */
 export const BASE_ESLINT_CONFIG = [
   ...ESLINT_CONFIG,

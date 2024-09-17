@@ -1,14 +1,14 @@
 // @ts-check
 
 import eslintPluginJSDoc from "eslint-plugin-jsdoc";
-import typescriptEslint from "typescript-eslint";
 
 /**
  * JSDoc eslint plugin configuration.
  *
  * https://github.com/gajus/eslint-plugin-jsdoc
+ * @type {import('typescript-eslint').ConfigWithExtends[]}
  */
-export const JSDOC_ESLINT_CONFIG = typescriptEslint.config(
+export const JSDOC_ESLINT_CONFIG = [
   {
     files: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.cjs", "**/*.mjs"],
     extends: [eslintPluginJSDoc.configs["flat/recommended-typescript"]],
@@ -31,4 +31,4 @@ export const JSDOC_ESLINT_CONFIG = typescriptEslint.config(
       "jsdoc/no-types": "off",
     },
   },
-);
+];
