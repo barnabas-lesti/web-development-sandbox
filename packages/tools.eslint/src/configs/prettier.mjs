@@ -1,4 +1,9 @@
+// @ts-check
+
 import eslintConfigPrettier from "eslint-config-prettier";
 import typescriptEslint from "typescript-eslint";
 
-export const createPrettierEslintConfig = () => typescriptEslint.config(eslintConfigPrettier);
+/**
+ * Prettier plugin configuration to remove formatting related rules from eslint.
+ */
+export const PRETTIER_ESLINT_CONFIG = typescriptEslint.config(eslintConfigPrettier);

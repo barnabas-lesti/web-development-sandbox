@@ -1,3 +1,3 @@
-import { createBaseEslintConfig } from "./src/index.mjs";
+import { BASE_ESLINT_CONFIG } from "./src/index.mjs";
 
-export default createBaseEslintConfig();
+export default BASE_ESLINT_CONFIG;

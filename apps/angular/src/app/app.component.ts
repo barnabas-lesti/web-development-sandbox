@@ -1,31 +1,43 @@
-import { Component } from "@angular/core";
+import { Component, type OnDestroy, type OnInit } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
-import { map, of } from "rxjs";
-import { TestType } from "./app.types";
+import { map, merge, of, type Subscription, tap } from "rxjs";
+
+import { type TestType } from "./app.types";
 
 @Component({
-  selector: "asd-component",
+  selector: "app-component",
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.scss",
 })
-export class AppLorem {
+export class AppComponent implements OnInit, OnDestroy {
   title = "WDS - Angular";
+
+  private subscriptions$$: Subscription | undefined;
 
   constructor() {
     const a: TestType = "a";
-    console.log(a);
+    console.debug(a);
+  }
 
-    of(null)
-      .pipe(map(() => "a"))
-      .subscribe(async (value) => console.log(value));
+  ngOnInit(): void {
+    this.subscriptions$$ = merge(
+      of(null).pipe(
+        map(() => "a"),
+        tap((value) => console.debug(value)),
+      ),
+    ).subscribe();
+  }
+
+  ngOnDestroy(): void {
+    this.subscriptions$$?.unsubscribe();
   }
 
   /**
-   *
-   * @param {string} value Something.
-   * @returns
+   * Test function.
+   * @param value Something.
+   * @returns Anything.
    */
   foo(value: string) {
     return "bar" + value;

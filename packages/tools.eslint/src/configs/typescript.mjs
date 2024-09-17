@@ -1,19 +1,22 @@
+// @ts-check
+
 import typescriptEslint from "typescript-eslint";
 
-export const createTypescriptEslintConfig = () => {
-  return typescriptEslint.config({
-    files: ["**/*.ts"],
-    languageOptions: {
-      parser: typescriptEslint.parser,
-      parserOptions: {
-        tsconfigRootDir: process.cwd(),
-        project: true,
-      },
+/**
+ * Typescript eslint configuration.
+ *
+ * https://typescript-eslint.io/rules
+ */
+export const TYPESCRIPT_ESLINT_CONFIG = typescriptEslint.config({
+  files: ["**/*.ts", "**/*.tsx"],
+  languageOptions: {
+    parser: typescriptEslint.parser,
+    parserOptions: {
+      project: true,
     },
-    extends: [...typescriptEslint.configs.strict, ...typescriptEslint.configs.stylistic],
-    // https://typescript-eslint.io/rules
-    rules: {
-      "@typescript-eslint/consistent-type-imports": ["error", { fixStyle: "inline-type-imports" }],
-    },
-  });
-};
+  },
+  extends: [...typescriptEslint.configs.strict, ...typescriptEslint.configs.stylistic],
+  rules: {
+    "@typescript-eslint/consistent-type-imports": ["error", { fixStyle: "inline-type-imports" }],
+  },
+});
