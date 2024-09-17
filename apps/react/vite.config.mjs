@@ -1,6 +1,8 @@
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
+const DEFAULT_PORT = 3000;
+
 /**
  * Application build configuration.
  *
@@ -13,7 +15,10 @@ export default defineConfig({
     emptyOutDir: true,
   },
   server: {
-    port: 3000,
+    port: DEFAULT_PORT,
+  },
+  preview: {
+    port: DEFAULT_PORT,
   },
   plugins: [react()],
 });

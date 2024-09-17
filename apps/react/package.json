@@ -2,8 +2,8 @@
   "name": "@wds/react",
   "version": "0.0.0",
   "scripts": {
-    "start": "vite",
     "build": "vite build",
+    "dev": "vite",
     "lint": "prettier . --check && eslint .",
     "lint:fix": "prettier . --write && eslint . --fix",
     "preview": "vite preview"

@@ -24,7 +24,7 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.subscriptions$$ = merge(
       of(null).pipe(
-        map(() => "a"),
+        map(() => "c"),
         tap((value) => console.debug(value)),
       ),
     ).subscribe();

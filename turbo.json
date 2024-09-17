@@ -6,18 +6,22 @@
       "dependsOn": ["^build"],
       "outputs": [".angular", ".turbo", "dist"]
     },
-    "lint": {},
-    "lint:fix": {},
-    "start": {
+    "dev": {
       "cache": false,
       "persistent": true,
       "dependsOn": ["^build"]
     },
-    "start:ssr": {
+    "dev:ssr": {
       "cache": false,
       "persistent": true,
       "dependsOn": ["build"]
     },
-    "test": {}
+    "lint": {},
+    "lint:fix": {},
+    "preview": {
+      "cache": false,
+      "persistent": true,
+      "dependsOn": ["^build"]
+    }
   }
 }

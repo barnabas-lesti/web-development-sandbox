@@ -3,12 +3,12 @@
   "scripts": {
     "build": "turbo build",
     "clean": "git clean -Xfd",
+    "dev": "turbo dev",
+    "dev:ssr": "turbo dev:ssr",
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
-    "ng": "ng",
-    "start": "turbo start",
-    "start:ssr": "turbo start:ssr",
-    "test": "turbo test"
+    "preview": "turbo preview",
+    "ng": "ng"
   },
   "workspaces": [
     "apps/*",
