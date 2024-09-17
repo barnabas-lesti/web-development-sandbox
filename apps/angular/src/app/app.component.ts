@@ -4,13 +4,13 @@ import { map, of } from "rxjs";
 import { TestType } from "./app.types";
 
 @Component({
-  selector: "app-component",
+  selector: "asd-component",
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.scss",
 })
-export class AppComponent {
+export class AppLorem {
   title = "WDS - Angular";
 
   constructor() {
