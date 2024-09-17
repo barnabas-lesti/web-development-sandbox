@@ -4,6 +4,8 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
+    "lint": "prettier . --check && eslint .",
+    "lint:fix": "prettier . --write && eslint . --fix",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -11,6 +13,8 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@wds/tools.eslint": "*",
+    "@wds/tools.prettier": "*",
     "@types/react": "^18.3.6",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
