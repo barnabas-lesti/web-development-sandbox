@@ -1,8 +1,8 @@
 import eslintPluginRxJS from "eslint-plugin-rxjs";
 import typescriptEslint from "typescript-eslint";
 
-export const RXJS_ESLINT_CONFIG = [
-  {
+export const createRxjsEslintConfig = () =>
+  typescriptEslint.config({
     files: ["**/*.ts"],
     languageOptions: {
       parser: typescriptEslint.parser,
@@ -17,5 +17,4 @@ export const RXJS_ESLINT_CONFIG = [
       ...eslintPluginRxJS.configs["recommended"].rules,
       "rxjs/no-ignored-subscription": "error",
     },
-  },
-];
+  });

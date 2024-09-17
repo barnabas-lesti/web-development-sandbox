@@ -1,12 +1,12 @@
 import globals from "globals";
+import typescriptEslint from "typescript-eslint";
 
-export const ENVIRONMENT_ESLINT_CONFIG = [
-  {
+export const createEnvironmentEslintConfig = () =>
+  typescriptEslint.config({
     languageOptions: {
       globals: {
         ...globals.browser,
         ...globals.node,
       },
     },
-  },
-];
+  });

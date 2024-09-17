@@ -1,7 +1,8 @@
 import eslintPluginUnusedImports from "eslint-plugin-unused-imports";
+import typescriptEslint from "typescript-eslint";
 
-export const UNUSED_IMPORTS_ESLINT_CONFIG = [
-  {
+export const createUnusedImportsEslintConfig = () =>
+  typescriptEslint.config({
     plugins: {
       "unused-imports": eslintPluginUnusedImports,
     },
@@ -12,5 +13,4 @@ export const UNUSED_IMPORTS_ESLINT_CONFIG = [
       "unused-imports/no-unused-imports": "error",
       "unused-imports/no-unused-vars": "error",
     },
-  },
-];
+  });

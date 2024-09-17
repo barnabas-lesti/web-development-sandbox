@@ -1,7 +1,8 @@
 import eslintPluginSimpleImportSort from "eslint-plugin-simple-import-sort";
+import typescriptEslint from "typescript-eslint";
 
-export const SIMPLE_IMPORT_SORT_ESLINT_CONFIG = [
-  {
+export const createSimpleImportSortEslintConfig = () =>
+  typescriptEslint.config({
     plugins: {
       "simple-import-sort": eslintPluginSimpleImportSort,
     },
@@ -22,5 +23,4 @@ export const SIMPLE_IMPORT_SORT_ESLINT_CONFIG = [
       ],
       "simple-import-sort/exports": "error",
     },
-  },
-];
+  });

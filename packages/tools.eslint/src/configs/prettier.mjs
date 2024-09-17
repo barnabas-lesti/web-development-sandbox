@@ -1,3 +1,4 @@
 import eslintConfigPrettier from "eslint-config-prettier";
+import typescriptEslint from "typescript-eslint";
 
-export const PRETTIER_ESLINT_CONFIG = [eslintConfigPrettier];
+export const createPrettierEslintConfig = () => typescriptEslint.config(eslintConfigPrettier);
