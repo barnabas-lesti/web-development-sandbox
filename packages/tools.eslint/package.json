@@ -15,7 +15,6 @@
   "devDependencies": {
     "@wds/tools.prettier": "*",
     "@eslint/js": "^9.9.1",
-    "@eslint/eslintrc": "^3.1.0",
     "@types/eslint__js": "^8.42.3",
     "angular-eslint": "^18.0.1",
     "eslint": "^8.57.0",
