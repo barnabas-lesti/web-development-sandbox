@@ -1,5 +1,3 @@
-// @ts-check
-
 import eslintConfigPrettier from "eslint-config-prettier";
 
 /**

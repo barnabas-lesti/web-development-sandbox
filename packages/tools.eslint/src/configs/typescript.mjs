@@ -10,7 +10,7 @@ import typescriptEslint from "typescript-eslint";
  */
 export const TYPESCRIPT_ESLINT_CONFIG = [
   {
-    files: ["**/*.ts", "**/*.tsx"],
+    files: ["**/*.{ts,tsx}"],
     languageOptions: {
       parser: typescriptEslint.parser,
       parserOptions: {

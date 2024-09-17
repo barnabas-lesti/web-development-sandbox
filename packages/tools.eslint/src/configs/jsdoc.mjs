@@ -10,14 +10,14 @@ import eslintPluginJSDoc from "eslint-plugin-jsdoc";
  */
 export const JSDOC_ESLINT_CONFIG = [
   {
-    files: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.cjs", "**/*.mjs"],
+    files: ["**/*.{ts,tsx,js,cjs,mjs}"],
     extends: [eslintPluginJSDoc.configs["flat/recommended-typescript"]],
     rules: {
       "jsdoc/require-jsdoc": "off",
     },
   },
   {
-    files: ["**/*.ts", "**/*.tsx"],
+    files: ["**/*.{ts,tsx}"],
     rules: {
       "jsdoc/require-param": "off",
       "jsdoc/check-param-names": "off",
@@ -25,7 +25,7 @@ export const JSDOC_ESLINT_CONFIG = [
     },
   },
   {
-    files: ["**/*.js", "**/*.cjs", "**/*.mjs"],
+    files: ["**/*.{js,cjs,mjs}"],
     rules: {
       "jsdoc/check-tag-names": "off",
       "jsdoc/no-types": "off",

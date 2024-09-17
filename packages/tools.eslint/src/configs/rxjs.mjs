@@ -1,5 +1,3 @@
-// @ts-check
-
 import eslintPluginRxJS from "eslint-plugin-rxjs";
 import typescriptEslint from "typescript-eslint";
 
@@ -11,7 +9,7 @@ import typescriptEslint from "typescript-eslint";
  */
 export const RXJS_ESLINT_CONFIG = [
   {
-    files: ["**/*.ts", "**/*.tsx"],
+    files: ["**/*.{ts,tsx}"],
     languageOptions: {
       parser: typescriptEslint.parser,
       parserOptions: {
