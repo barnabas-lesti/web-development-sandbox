@@ -4,7 +4,7 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": [".angular", ".turbo", "dist"]
+      "outputs": [".angular", "dist"]
     },
     "dev": {
       "cache": false,

@@ -1,6 +1,7 @@
 // @ts-check
 
 import eslint from "@eslint/js";
+import globals from "globals";
 
 /**
  * Base eslint configuration.
@@ -11,6 +12,12 @@ import eslint from "@eslint/js";
 export const ESLINT_CONFIG = [
   { ignores: ["node_modules", ".turbo", "dist"] },
   {
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+    },
     extends: [eslint.configs.recommended],
     rules: {
       "eol-last": ["error", "always"],

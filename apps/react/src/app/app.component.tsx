@@ -11,10 +11,14 @@ export const AppComponent: React.FC = () => {
 
   return (
     <>
+      {[1, 2, 3].map((value) => (
+        <div key={value}>{value}</div>
+      ))}
       <div>
         <a
           href="https://vitejs.dev"
           target="_blank"
+          rel="noreferrer"
         >
           <img
             src={viteLogo}
@@ -25,6 +29,7 @@ export const AppComponent: React.FC = () => {
         <a
           href="https://react.dev"
           target="_blank"
+          rel="noreferrer"
         >
           <img
             src={reactLogo}
