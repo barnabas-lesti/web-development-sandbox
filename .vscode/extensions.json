@@ -5,6 +5,7 @@
     "esbenp.prettier-vscode",
     "yzhang.markdown-all-in-one",
     "redhat.vscode-yaml",
-    "angular.ng-template"
+    "angular.ng-template",
+    "vue.volar"
   ]
 }
