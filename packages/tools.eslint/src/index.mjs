@@ -31,13 +31,11 @@ export const ANGULAR_WORKSPACE_ESLINT_CONFIG = createEslintConfig(
   BASE_WORKSPACE_ESLINT_CONFIG,
   RXJS_ESLINT_CONFIG,
   ANGULAR_ESLINT_CONFIG,
-  [
-    {
-      rules: {
-        "@typescript-eslint/consistent-type-imports": "off",
-      },
+  {
+    rules: {
+      "@typescript-eslint/consistent-type-imports": "off",
     },
-  ],
+  },
 );
 
 /**
