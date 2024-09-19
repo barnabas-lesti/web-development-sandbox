@@ -10,7 +10,8 @@ import globals from "globals";
  * @type {import('typescript-eslint').ConfigWithExtends[]}
  */
 export const ESLINT_CONFIG = [
-  { ignores: ["node_modules", ".turbo", "dist"] },
+  { ignores: [".turbo", "dist", "node_modules"] },
+  eslint.configs.recommended,
   {
     languageOptions: {
       globals: {
@@ -18,7 +19,6 @@ export const ESLINT_CONFIG = [
         ...globals.node,
       },
     },
-    extends: [eslint.configs.recommended],
     rules: {
       "eol-last": ["error", "always"],
       "default-param-last": ["error"],

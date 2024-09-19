@@ -6,6 +6,16 @@ defineProps<{ msg: string }>();
 
 const count = ref(0);
 let a: TestType = { foo: "bar" };
+
+new Promise(async (resolve) => resolve(null));
+
+/**
+ *
+ * @returns
+ */
+function foo() {
+  return "bar";
+}
 </script>
 
 <template>

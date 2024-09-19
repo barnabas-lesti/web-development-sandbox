@@ -1,6 +1,4 @@
-export { ANGULAR_ESLINT_CONFIG } from "./configs/angular.mjs";
-export { BASE_ESLINT_CONFIG } from "./configs/base.mjs";
-export { REACT_ESLINT_CONFIG } from "./configs/react.mjs";
-export { RXJS_ESLINT_CONFIG } from "./configs/rxjs.mjs";
-export { VUE_ESLINT_CONFIG } from "./configs/vue.mjs";
-export { createEslintConfig } from "./utility.mjs";
+export { ANGULAR_WORKSPACE_ESLINT_CONFIG } from "./workspace-configs/angular.mjs";
+export { JAVASCRIPT_WORKSPACE_ESLINT_CONFIG } from "./workspace-configs/javascript.mjs";
+export { REACT_WORKSPACE_ESLINT_CONFIG } from "./workspace-configs/react.mjs";
+export { VUE_WORKSPACE_ESLINT_CONFIG } from "./workspace-configs/vue.mjs";

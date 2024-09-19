@@ -1,5 +1,13 @@
-// @ts-check
+import { ANGULAR_WORKSPACE_ESLINT_CONFIG } from "@wds/tools.eslint";
 
-import { ANGULAR_ESLINT_CONFIG, BASE_ESLINT_CONFIG, createEslintConfig, RXJS_ESLINT_CONFIG } from "@wds/tools.eslint";
+export default ANGULAR_WORKSPACE_ESLINT_CONFIG;
 
-export default createEslintConfig(BASE_ESLINT_CONFIG, ANGULAR_ESLINT_CONFIG, RXJS_ESLINT_CONFIG);
+let a = 10;
+
+/**
+ *
+ * @returns
+ */
+function foo() {
+  return "";
+}

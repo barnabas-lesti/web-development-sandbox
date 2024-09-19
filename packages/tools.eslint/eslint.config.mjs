@@ -1,5 +1,5 @@
 // @ts-check
 
-import { BASE_ESLINT_CONFIG, createEslintConfig } from "./src/index.mjs";
+import { JAVASCRIPT_WORKSPACE_ESLINT_CONFIG } from "./src/index.mjs";
 
-export default createEslintConfig(BASE_ESLINT_CONFIG);
+export default JAVASCRIPT_WORKSPACE_ESLINT_CONFIG;

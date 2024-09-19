@@ -9,7 +9,7 @@ import typescriptEslint from "typescript-eslint";
  */
 export const RXJS_ESLINT_CONFIG = [
   {
-    files: ["**/*.{ts,tsx}"],
+    files: ["**/*.{ts,tsx,vue}"],
     languageOptions: {
       parser: typescriptEslint.parser,
       parserOptions: {

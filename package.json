@@ -5,8 +5,8 @@
     "clean": "git clean -Xfd",
     "dev": "turbo dev",
     "dev:ssr": "turbo dev:ssr",
-    "lint": "turbo lint",
-    "lint:fix": "turbo lint:fix",
+    "lint": "turbo lint --continue",
+    "lint:fix": "turbo lint:fix --continue",
     "preview": "turbo preview",
     "ng": "ng"
   },

@@ -10,16 +10,24 @@ import typescriptEslint from "typescript-eslint";
  */
 export const TYPESCRIPT_ESLINT_CONFIG = [
   {
-    files: ["**/*.{ts,tsx}"],
+    files: ["**/*.{ts,tsx,vue}"],
     languageOptions: {
-      parser: typescriptEslint.parser,
       parserOptions: {
+        parser: typescriptEslint.parser,
         project: true,
       },
     },
     extends: [...typescriptEslint.configs.strict, ...typescriptEslint.configs.stylistic],
     rules: {
       "@typescript-eslint/consistent-type-imports": ["error", { fixStyle: "inline-type-imports" }],
+    },
+  },
+  {
+    files: ["**/*.{js,cjs,mjs}"],
+    languageOptions: {
+      parserOptions: {
+        project: false,
+      },
     },
   },
 ];

@@ -14,6 +14,7 @@ export const SIMPLE_IMPORT_SORT_ESLINT_CONFIG = [
       "simple-import-sort": eslintPluginSimpleImportSort,
     },
     rules: {
+      "simple-import-sort/exports": "error",
       "simple-import-sort/imports": [
         "error",
         {
@@ -27,7 +28,6 @@ export const SIMPLE_IMPORT_SORT_ESLINT_CONFIG = [
           ],
         },
       ],
-      "simple-import-sort/exports": "error",
     },
   },
 ];

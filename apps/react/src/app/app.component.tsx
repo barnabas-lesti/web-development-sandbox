@@ -1,10 +1,17 @@
-import { useState } from "react";
-
+import { useState, useCallback } from "react";
+import "./app.module.css";
 import reactLogo from "./assets/react.svg";
-
 import viteLogo from "/vite.svg";
 
-import "./app.module.css";
+export let a = 10;
+
+/**
+ *
+ * @returns
+ */
+function foo() {
+  return "";
+}
 
 export const AppComponent: React.FC = () => {
   const [count, setCount] = useState(0);
@@ -12,7 +19,7 @@ export const AppComponent: React.FC = () => {
   return (
     <>
       {[1, 2, 3].map((value) => (
-        <div key={value}>{value}</div>
+        <div>{value}</div>
       ))}
       <div>
         <a
