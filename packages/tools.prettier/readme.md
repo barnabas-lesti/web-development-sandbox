@@ -1,4 +1,4 @@
-# WDS - Prettier tool
+# Tools / Prettier
 
 Prettier tool workspace where the project formatting configuration is defined and can be consumed by consumers.
 
