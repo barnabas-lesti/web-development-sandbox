@@ -1,12 +1,12 @@
 // @ts-check
 
 /**
- * Base project prettier configuration.
+ * Base workspace prettier configuration.
  *
  * https://prettier.io/docs/en/options
  * @type {import("prettier").Options}
  */
-export const BASE_PRETTIER_CONFIG = {
+export const BASE_WORKSPACE_PRETTIER_CONFIG = {
   printWidth: 120,
   tabWidth: 2,
   useTabs: false,
