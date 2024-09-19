@@ -10,11 +10,12 @@ import typescriptEslint from "typescript-eslint";
  */
 export const TYPESCRIPT_ESLINT_CONFIG = [
   {
-    files: ["**/*.{ts,tsx,vue}"],
+    files: ["**/*.{ts,tsx,vue,js,cjs,mjs}"],
     languageOptions: {
       parserOptions: {
         parser: typescriptEslint.parser,
         project: true,
+        extraFileExtensions: [".vue"],
       },
     },
     extends: [...typescriptEslint.configs.strict, ...typescriptEslint.configs.stylistic],

@@ -1,21 +1,9 @@
 <script setup lang="ts">
-import { TestType } from "./hello-world.types";
 import { ref } from "vue";
 
 defineProps<{ msg: string }>();
 
 const count = ref(0);
-let a: TestType = { foo: "bar" };
-
-new Promise(async (resolve) => resolve(null));
-
-/**
- *
- * @returns
- */
-function foo() {
-  return "bar";
-}
 </script>
 
 <template>
@@ -50,7 +38,9 @@ function foo() {
       >Vue Docs Scaling up Guide</a
     >.
   </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
+  <p class="read-the-docs">
+Click on the Vite and Vue logos to learn more
+</p>
 </template>
 
 <style scoped>

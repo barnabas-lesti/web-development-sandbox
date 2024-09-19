@@ -8,10 +8,10 @@ export const VUE_ESLINT_CONFIG = [
   ...eslintPluginVue.configs["flat/recommended"],
   {
     files: ["**/*.vue"],
-    languageOptions: {
-      parserOptions: {
-        extraFileExtensions: [".vue"],
-      },
+    rules: {
+      "vue/html-indent": "off",
+      "vue/html-closing-bracket-newline": "off",
+      "vue/multi-word-component-names": "off",
     },
   },
 ];

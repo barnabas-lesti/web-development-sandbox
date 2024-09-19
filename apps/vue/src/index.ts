@@ -5,13 +5,3 @@ import { AppComponent } from "./app";
 import "./index.css";
 
 createApp(AppComponent).mount("#app_root");
-
-let a = "1";
-
-/**
- *
- * @returns
- */
-function foo() {
-  return "bar";
-}
