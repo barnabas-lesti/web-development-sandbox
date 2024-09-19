@@ -4,7 +4,8 @@
   "words": [
     "devkit",
     "nocheck",
-    "prerender"
+    "prerender",
+    "Turborepo"
   ],
   "flagWords": []
 }
