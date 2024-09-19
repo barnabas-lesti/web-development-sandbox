@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import { TestType } from "./hello-world.types";
 import { ref } from "vue";
 
 defineProps<{ msg: string }>();
 
 const count = ref(0);
+let a: TestType = { foo: "bar" };
 </script>
 
 <template>
