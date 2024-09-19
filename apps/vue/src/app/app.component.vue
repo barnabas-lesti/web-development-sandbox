@@ -12,7 +12,7 @@ import { HelloWorldComponent } from "./hello-world";
         src="/vite.svg"
         class="logo"
         alt="Vite logo"
-      >
+      />
     </a>
     <a
       href="https://vuejs.org/"
@@ -22,7 +22,7 @@ import { HelloWorldComponent } from "./hello-world";
         src="./assets/vue.svg"
         class="logo vue"
         alt="Vue logo"
-      >
+      />
     </a>
   </div>
   <HelloWorldComponent msg="Vite + Vue" />
