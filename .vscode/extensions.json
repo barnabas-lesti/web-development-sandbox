@@ -3,9 +3,9 @@
     "streetsidesoftware.code-spell-checker",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "stylelint.vscode-stylelint",
-    "redhat.vscode-yaml",
     "yzhang.markdown-all-in-one",
-    "unifiedjs.vscode-mdx"
+    "redhat.vscode-yaml",
+    "angular.ng-template",
+    "vue.volar"
   ]
 }

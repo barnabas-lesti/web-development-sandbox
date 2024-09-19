@@ -1,0 +1,41 @@
+{
+  "name": "@wds/angular",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "ng build",
+    "dev": "ng serve",
+    "dev:ssr": "concurrently npm:dev:ssr.client npm:dev:ssr.server",
+    "dev:ssr.client": "ng build --watch",
+    "dev:ssr.server": "nodemon ./dist/app/server/server.mjs --watch ./dist/app/server/server.mjs",
+    "lint": "prettier . --check && eslint .",
+    "lint:fix": "prettier . --write && eslint . --fix"
+  },
+  "dependencies": {
+    "@angular/animations": "^18.2.0",
+    "@angular/common": "^18.2.0",
+    "@angular/compiler": "^18.2.0",
+    "@angular/core": "^18.2.0",
+    "@angular/forms": "^18.2.0",
+    "@angular/platform-browser": "^18.2.0",
+    "@angular/platform-browser-dynamic": "^18.2.0",
+    "@angular/platform-server": "^18.2.0",
+    "@angular/router": "^18.2.0",
+    "@angular/ssr": "^18.2.4",
+    "express": "^4.18.2",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.10"
+  },
+  "devDependencies": {
+    "@wds/tools.eslint": "*",
+    "@wds/tools.prettier": "*",
+    "@angular-devkit/build-angular": "^18.2.4",
+    "@angular/cli": "^18.2.4",
+    "@angular/compiler-cli": "^18.2.0",
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.18.0",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.4",
+    "typescript": "~5.5.2"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "checkJs": true
+  },
+  "exclude": ["node_modules", ".turbo"],
+  "include": ["**/*.mjs", "**/*.d.mts"]
+}
