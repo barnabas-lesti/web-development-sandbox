@@ -5,7 +5,7 @@ import typescriptEslint from "typescript-eslint";
  * RxJS framework related eslint configuration.
  *
  * https://github.com/cartant/eslint-plugin-rxjs
- * @type {import('typescript-eslint').ConfigWithExtends[]}
+ * @type {ConfigWithExtends[]}
  */
 export const RXJS_ESLINT_CONFIG = [
   {

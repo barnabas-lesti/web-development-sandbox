@@ -8,7 +8,7 @@ import eslintPluginReactRefresh from "eslint-plugin-react-refresh";
  * https://www.npmjs.com/package/eslint-plugin-react-hooks
  *
  * https://github.com/ArnaudBarre/eslint-plugin-react-refresh
- * @type {import('typescript-eslint').ConfigWithExtends[]}
+ * @type {ConfigWithExtends[]}
  */
 export const REACT_ESLINT_CONFIG = [
   {

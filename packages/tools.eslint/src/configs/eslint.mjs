@@ -1,5 +1,3 @@
-// @ts-check
-
 import eslint from "@eslint/js";
 import globals from "globals";
 
@@ -7,7 +5,7 @@ import globals from "globals";
  * Base eslint configuration.
  *
  * https://eslint.org/docs/latest/use/configure/
- * @type {import('typescript-eslint').ConfigWithExtends[]}
+ * @type {ConfigWithExtends[]}
  */
 export const ESLINT_CONFIG = [
   { ignores: [".turbo", "dist", "node_modules"] },

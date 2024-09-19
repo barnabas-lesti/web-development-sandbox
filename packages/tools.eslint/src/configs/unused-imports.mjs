@@ -1,12 +1,10 @@
-// @ts-check
-
 import eslintPluginUnusedImports from "eslint-plugin-unused-imports";
 
 /**
  * Unused imports eslint plugin configuration.
  *
  * https://github.com/sweepline/eslint-plugin-unused-imports
- * @type {import('typescript-eslint').ConfigWithExtends[]}
+ * @type {ConfigWithExtends[]}
  */
 export const UNUSED_IMPORTS_ESLINT_CONFIG = [
   {

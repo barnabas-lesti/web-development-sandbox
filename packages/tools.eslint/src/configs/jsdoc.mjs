@@ -1,12 +1,10 @@
-// @ts-check
-
 import eslintPluginJSDoc from "eslint-plugin-jsdoc";
 
 /**
  * JSDoc eslint plugin configuration.
  *
  * https://github.com/gajus/eslint-plugin-jsdoc
- * @type {import('typescript-eslint').ConfigWithExtends[]}
+ * @type {ConfigWithExtends[]}
  */
 export const JSDOC_ESLINT_CONFIG = [
   {

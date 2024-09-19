@@ -1,12 +1,10 @@
-// @ts-check
-
 import angularEslint from "angular-eslint";
 
 /**
  * Angular framework related eslint configuration.
  *
  * https://github.com/angular-eslint/angular-eslint
- * @type {import('typescript-eslint').ConfigWithExtends[]}
+ * @type {ConfigWithExtends[]}
  */
 export const ANGULAR_ESLINT_CONFIG = [
   { ignores: [".angular"] },

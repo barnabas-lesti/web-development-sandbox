@@ -1,12 +1,10 @@
-// @ts-check
-
 import typescriptEslint from "typescript-eslint";
 
 /**
  * Typescript eslint configuration.
  *
  * https://typescript-eslint.io/rules
- * @type {import('typescript-eslint').ConfigWithExtends[]}
+ * @type {ConfigWithExtends[]}
  */
 export const TYPESCRIPT_ESLINT_CONFIG = [
   {
@@ -29,6 +27,9 @@ export const TYPESCRIPT_ESLINT_CONFIG = [
       parserOptions: {
         project: false,
       },
+    },
+    rules: {
+      "@typescript-eslint/ban-ts-comment": "off",
     },
   },
 ];

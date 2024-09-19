@@ -1,5 +1,3 @@
-// @ts-check
-
 import { ANGULAR_ESLINT_CONFIG } from "./configs/angular.mjs";
 import { ESLINT_CONFIG } from "./configs/eslint.mjs";
 import { JSDOC_ESLINT_CONFIG } from "./configs/jsdoc.mjs";
