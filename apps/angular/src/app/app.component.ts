@@ -2,6 +2,7 @@ import { Component, type OnDestroy, type OnInit } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 import { map, merge, of, type Subscription, tap } from "rxjs";
 
+import { AppService } from "./app.service";
 import { type TestType } from "./app.types";
 
 @Component({
@@ -16,7 +17,8 @@ export class AppComponent implements OnInit, OnDestroy {
 
   private subscriptions$$: Subscription | undefined;
 
-  constructor() {
+  constructor(private readonly appService: AppService) {
+    void this.appService;
     const a: TestType = "a";
     console.debug(a);
   }
