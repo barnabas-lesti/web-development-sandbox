@@ -3,4 +3,5 @@
 dist
 loader
 node_modules
-www
+
+src/components.d.ts

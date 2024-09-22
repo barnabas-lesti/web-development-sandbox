@@ -25,10 +25,14 @@
   ],
   "scripts": {
     "build": "stencil build",
-    "dev": "stencil build --watch"
+    "dev": "stencil build --watch",
+    "lint": "prettier . --check && eslint .",
+    "lint:fix": "prettier . --write && eslint . --fix"
   },
   "devDependencies": {
     "@stencil/core": "^4.7.0",
-    "@types/node": "^16.18.11"
+    "@types/node": "^16.18.11",
+    "@wds/tools.eslint": "*",
+    "@wds/tools.prettier": "*"
   }
 }
