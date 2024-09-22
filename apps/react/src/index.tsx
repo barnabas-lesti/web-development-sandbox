@@ -16,6 +16,7 @@ createRoot(document.getElementById("app_root")!).render(
       <a href="/"></a>
       <my-component
         first="Stencil"
+        middle="lorem"
         last="'Don't call me a framework' JS"
       ></my-component>
       <AppComponent />

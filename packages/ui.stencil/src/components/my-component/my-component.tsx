@@ -1,9 +1,9 @@
-import { Component, Prop, h } from '@stencil/core';
-import { format } from '../../utils/utils';
+import { Component, Prop, h } from "@stencil/core";
+import { format } from "../../utils/utils";
 
 @Component({
-  tag: 'my-component',
-  styleUrl: 'my-component.css',
+  tag: "my-component",
+  styleUrl: "my-component.css",
   shadow: true,
 })
 export class MyComponent {
@@ -15,7 +15,7 @@ export class MyComponent {
   /**
    * The middle name
    */
-  @Prop() middle: string;
+  @Prop() middle!: string;
 
   /**
    * The last name

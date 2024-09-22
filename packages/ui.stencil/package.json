@@ -13,10 +13,6 @@
       "import": "./dist/index.js",
       "types": "./dist/types/index.d.ts"
     },
-    "./my-component": {
-      "import": "./dist/components/my-component.js",
-      "types": "./dist/components/my-component.d.ts"
-    },
     "./loader": {
       "require": "./loader/index.cjs",
       "import": "./loader/index.js",

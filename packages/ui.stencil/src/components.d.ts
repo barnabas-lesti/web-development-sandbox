@@ -45,7 +45,7 @@ declare namespace LocalJSX {
         /**
           * The middle name
          */
-        "middle"?: string;
+        "middle": string;
     }
     interface IntrinsicElements {
         "my-component": MyComponent;
