@@ -14,7 +14,8 @@ createRoot(document.getElementById("app_root")!).render(
   <StrictMode>
     <>
       <a href="/"></a>
-      <wds-button>Stencil button</wds-button>
+      <sui-button>Stencil button</sui-button>
+      <sui-input />
       <AppComponent />
     </>
   </StrictMode>,
