@@ -1,0 +1,35 @@
+{
+  "name": "@wds/ui.stencil",
+  "version": "0.0.1",
+  "description": "Web component UI library with Stencil.",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs.js",
+      "import": "./dist/index.js"
+    },
+    "./my-component": {
+      "import": "./dist/components/my-component.js",
+      "types": "./dist/components/my-component.d.ts"
+    },
+    "./loader": {
+      "require": "./loader/index.cjs",
+      "import": "./loader/index.js",
+      "types": "./loader/index.d.ts"
+    }
+  },
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "stencil build",
+    "dev": "stencil build --watch"
+  },
+  "devDependencies": {
+    "@stencil/core": "^4.7.0",
+    "@types/node": "^16.18.11"
+  }
+}
