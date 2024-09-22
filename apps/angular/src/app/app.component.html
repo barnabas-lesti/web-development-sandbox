@@ -197,6 +197,21 @@
 
 <main class="main">
   <div class="content">
+    <div>
+      <button (click)="onNativeButtonClick()">Native button</button>
+      <sui-button
+        aria-label="Button aria label."
+        (click)="onWebComponentButtonClick()"
+      >
+        Stencil button
+      </sui-button>
+      <sui-input
+        aria-label="Input aria label."
+        placeholder="Lorem ipsum"
+        (input)="onWebComponentInput($event)"
+      />
+    </div>
+
     <div class="left-side">
       <svg
         xmlns="http://www.w3.org/2000/svg"

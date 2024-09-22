@@ -11,9 +11,19 @@ export const AppComponent: React.FC = () => {
 
   return (
     <>
-      {[1, 2, 3].map((value) => (
-        <div key={value}>{value}</div>
-      ))}
+      <div>
+        <sui-button
+          aria-label="Button aria label."
+          onClick={() => console.debug("click")}
+        >
+          Stencil button
+        </sui-button>
+        <sui-input
+          aria-label="Input aria label."
+          placeholder="Lorem ipsum"
+          onInput={(event: InputEvent) => console.debug((event.target as HTMLInputElement).value)}
+        />
+      </div>
       <div>
         <a
           href="https://vitejs.dev"

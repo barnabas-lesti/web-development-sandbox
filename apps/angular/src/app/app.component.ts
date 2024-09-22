@@ -1,4 +1,4 @@
-import { Component, type OnDestroy, type OnInit } from "@angular/core";
+import { Component, CUSTOM_ELEMENTS_SCHEMA, type OnDestroy, type OnInit } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 import { map, merge, of, type Subscription, tap } from "rxjs";
 
@@ -7,10 +7,11 @@ import { type TestType } from "./app.types";
 
 @Component({
   selector: "app-component",
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.scss",
+  standalone: true,
+  imports: [RouterOutlet],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppComponent implements OnInit, OnDestroy {
   title = "WDS - Angular";
@@ -43,5 +44,17 @@ export class AppComponent implements OnInit, OnDestroy {
    */
   foo(value: string) {
     return "bar" + value;
+  }
+
+  onNativeButtonClick() {
+    console.debug("native click");
+  }
+
+  onWebComponentButtonClick() {
+    console.debug("web component click");
+  }
+
+  onWebComponentInput(event: Event) {
+    console.debug((event.target as HTMLInputElement).value);
   }
 }

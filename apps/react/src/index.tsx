@@ -12,11 +12,6 @@ defineCustomElements(window);
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 createRoot(document.getElementById("app_root")!).render(
   <StrictMode>
-    <>
-      <a href="/"></a>
-      <sui-button>Stencil button</sui-button>
-      <sui-input />
-      <AppComponent />
-    </>
+    <AppComponent />
   </StrictMode>,
 );

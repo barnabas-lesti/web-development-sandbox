@@ -4,6 +4,20 @@ import { HelloWorldComponent } from "./hello-world";
 
 <template>
   <div>
+    <sui-button
+      aria-label="Button aria label."
+      @click="() => console.debug('click')"
+    >
+      Stencil button
+    </sui-button>
+    <sui-input
+      aria-label="Input aria label."
+      placeholder="Lorem ipsum"
+      @input="(event: InputEvent) => console.debug((event.target as HTMLInputElement).value)"
+    />
+  </div>
+
+  <div>
     <a
       href="https://vitejs.dev"
       target="_blank"

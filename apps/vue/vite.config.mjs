@@ -2,7 +2,7 @@ import vue from "@vitejs/plugin-vue";
 import { defineConfig } from "vite";
 
 const DEFAULT_PORT = 8080;
-
+const CUSTOM_ELEMENTS = ["sui-button", "sui-input"];
 /**
  * Application build configuration.
  *
@@ -20,5 +20,13 @@ export default defineConfig({
   preview: {
     port: DEFAULT_PORT,
   },
-  plugins: [vue()],
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => CUSTOM_ELEMENTS.includes(tag),
+        },
+      },
+    }),
+  ],
 });
