@@ -27,6 +27,7 @@
     "zone.js": "~0.14.10"
   },
   "devDependencies": {
+    "@wds/ui.stencil": "*",
     "@wds/tools.eslint": "*",
     "@wds/tools.prettier": "*",
     "@angular-devkit/build-angular": "^18.2.4",

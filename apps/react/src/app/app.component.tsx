@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import reactLogo from "./assets/react.svg";
 
@@ -7,13 +7,28 @@ import viteLogo from "/vite.svg";
 import "./app.module.css";
 
 export const AppComponent: React.FC = () => {
-  const [count, setCount] = useState(0);
+  const [inputValue, setInputValue] = useState("");
+
+  useEffect(() => {
+    console.debug(inputValue);
+  }, [inputValue]);
 
   return (
     <>
-      {[1, 2, 3].map((value) => (
-        <div key={value}>{value}</div>
-      ))}
+      <div>
+        <wds-button
+          aria-label="Button aria label."
+          onClick={() => setInputValue("")}
+        >
+          Reset input
+        </wds-button>
+        <wds-input
+          value={inputValue}
+          onInput={(event: Event) => setInputValue((event.target as HTMLInputElement).value)}
+          aria-label="Input aria label."
+          placeholder="Lorem ipsum"
+        />
+      </div>
       <div>
         <a
           href="https://vitejs.dev"
@@ -40,7 +55,6 @@ export const AppComponent: React.FC = () => {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>

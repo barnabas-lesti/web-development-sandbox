@@ -1,8 +1,32 @@
 <script setup lang="ts">
+import { ref, watch } from "vue";
+
 import { HelloWorldComponent } from "./hello-world";
+
+const inputValue = ref("");
+
+watch(inputValue, (newValue, oldValue) => {
+  console.debug("oldValue", oldValue);
+  console.debug("newValue", newValue);
+});
 </script>
 
 <template>
+  <div>
+    <wds-button
+      aria-label="Button aria label."
+      @click="() => (inputValue = '')"
+    >
+      Reset input
+    </wds-button>
+
+    <wds-input
+      v-model="inputValue"
+      aria-label="Input aria label."
+      placeholder="Lorem ipsum"
+    />
+  </div>
+
   <div>
     <a
       href="https://vitejs.dev"

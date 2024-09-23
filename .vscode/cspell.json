@@ -5,6 +5,7 @@
     "devkit",
     "nocheck",
     "prerender",
+    "stylelint",
     "Turborepo"
   ],
   "flagWords": []

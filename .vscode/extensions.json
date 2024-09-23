@@ -1,8 +1,9 @@
 {
   "recommendations": [
     "streetsidesoftware.code-spell-checker",
-    "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
+    "stylelint.vscode-stylelint",
+    "dbaeumer.vscode-eslint",
     "yzhang.markdown-all-in-one",
     "redhat.vscode-yaml",
     "angular.ng-template",

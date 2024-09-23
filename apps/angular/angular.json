@@ -32,12 +32,7 @@
               }
             ],
             "styles": ["src/index.scss"],
-            "scripts": [],
-            "server": "src/index.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "src/index.ssr.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {

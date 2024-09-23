@@ -197,6 +197,22 @@
 
 <main class="main">
   <div class="content">
+    <div>
+      <wds-button
+        aria-label="Button aria label."
+        (click)="onWdsButtonClick()"
+      >
+        Reset input
+      </wds-button>
+
+      <wds-input
+        ngDefaultControl
+        [(ngModel)]="inputValue"
+        aria-label="Input aria label."
+        placeholder="Lorem ipsum"
+      />
+    </div>
+
     <div class="left-side">
       <svg
         xmlns="http://www.w3.org/2000/svg"

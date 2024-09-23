@@ -5,6 +5,7 @@ import { PRETTIER_ESLINT_CONFIG } from "./configs/prettier.mjs";
 import { REACT_ESLINT_CONFIG } from "./configs/react.mjs";
 import { RXJS_ESLINT_CONFIG } from "./configs/rxjs.mjs";
 import { SIMPLE_IMPORT_SORT_ESLINT_CONFIG } from "./configs/simple-import-sort.mjs";
+import { STENCIL_ESLINT_CONFIG } from "./configs/stencil.mjs";
 import { TYPESCRIPT_ESLINT_CONFIG } from "./configs/typescript.mjs";
 import { UNUSED_IMPORTS_ESLINT_CONFIG } from "./configs/unused-imports.mjs";
 import { VUE_ESLINT_CONFIG } from "./configs/vue.mjs";
@@ -45,3 +46,8 @@ export const REACT_WORKSPACE_ESLINT_CONFIG = createEslintConfig(BASE_WORKSPACE_E
  * Vue based workspace eslint configuration.
  */
 export const VUE_WORKSPACE_ESLINT_CONFIG = createEslintConfig(BASE_WORKSPACE_ESLINT_CONFIG, VUE_ESLINT_CONFIG);
+
+/**
+ * Stencil based workspace eslint configuration.
+ */
+export const STENCIL_WORKSPACE_ESLINT_CONFIG = createEslintConfig(BASE_WORKSPACE_ESLINT_CONFIG, STENCIL_ESLINT_CONFIG);
