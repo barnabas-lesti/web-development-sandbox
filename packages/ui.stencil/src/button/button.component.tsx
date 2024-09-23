@@ -1,19 +1,20 @@
-import { Component, h } from "@stencil/core";
+import { Component, h, Prop } from "@stencil/core";
 
-/**
- * Project UI button component.
- */
+import { DEFAULT_BUTTON_COMPONENT_TYPE } from "./button.const";
+import { type ButtonComponentType } from "./button.types";
+
 @Component({
   tag: "wds-button",
-  styleUrl: "button.component.css",
+  styleUrl: "./button.component.css",
   shadow: true,
+  formAssociated: true,
 })
 export class ButtonComponent {
+  @Prop() label?: string;
+
+  @Prop() type?: ButtonComponentType = DEFAULT_BUTTON_COMPONENT_TYPE;
+
   render() {
-    return (
-      <button>
-        <slot />
-      </button>
-    );
+    return <button type={this.type}>{this.label ? this.label : <slot />}</button>;
   }
 }

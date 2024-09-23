@@ -1,0 +1,4 @@
+button {
+  background-color: var(--wds-secondary-color);
+  color: var(--wds-on-secondary-color);
+}

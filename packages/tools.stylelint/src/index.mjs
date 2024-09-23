@@ -9,5 +9,7 @@ export const BASE_WORKSPACE_STYLELINT_CONFIG = {
   extends: "stylelint-config-recommended",
   rules: {
     "no-empty-source": null,
+    "color-no-hex": true,
+    "color-named": "never",
   },
 };

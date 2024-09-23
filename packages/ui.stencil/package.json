@@ -14,7 +14,7 @@
       "types": "./dist/types/index.d.ts"
     },
     "./loader": {
-      "require": "./loader/index.cjs",
+      "require": "./loader/index.cjs.js",
       "import": "./loader/index.js",
       "types": "./loader/index.d.ts"
     }
@@ -30,6 +30,7 @@
     "lint:fix": "prettier . --write && stylelint \"**/*.css\" --fix && eslint . --fix"
   },
   "devDependencies": {
+    "@storybook/html": "^8.3.2",
     "@stencil/core": "^4.7.0",
     "@types/node": "^16.18.11",
     "@wds/tools.eslint": "*",
