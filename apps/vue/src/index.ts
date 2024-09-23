@@ -6,8 +6,6 @@ import { AppComponent } from "./app";
 
 import "./index.css";
 
-import "@wds/ui.lit";
-
 defineCustomElements(window);
 
 createApp(AppComponent).mount("#app_root");
