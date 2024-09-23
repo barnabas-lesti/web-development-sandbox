@@ -1,12 +1,26 @@
-import { Component, h } from "@stencil/core";
+import { Component, h, Prop } from "@stencil/core";
 
+/**
+ * Project UI input component.
+ */
 @Component({
-  tag: "sui-input",
+  tag: "wds-input",
   styleUrl: "input.component.css",
   shadow: true,
+  formAssociated: true,
 })
 export class InputComponent {
+  /**
+   * Value of the input.
+   */
+  @Prop({ reflect: true, mutable: true }) value: string;
+
   render() {
-    return <slot />;
+    return (
+      <input
+        value={this.value}
+        onInput={(event) => (this.value = (event.target as HTMLInputElement).value)}
+      />
+    );
   }
 }

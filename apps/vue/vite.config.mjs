@@ -2,7 +2,7 @@ import vue from "@vitejs/plugin-vue";
 import { defineConfig } from "vite";
 
 const DEFAULT_PORT = 8080;
-const CUSTOM_ELEMENTS = ["lui-button", "lui-input", "sui-button", "sui-input"];
+const CUSTOM_ELEMENTS = ["wds-button", "wds-input"];
 /**
  * Application build configuration.
  *

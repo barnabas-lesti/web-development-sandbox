@@ -27,7 +27,6 @@
     "zone.js": "~0.14.10"
   },
   "devDependencies": {
-    "@wds/ui.lit": "*",
     "@wds/ui.stencil": "*",
     "@wds/tools.eslint": "*",
     "@wds/tools.prettier": "*",

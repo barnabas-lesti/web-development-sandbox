@@ -1,9 +1,9 @@
 /// <reference types="vite/client" />
 
-import { type JSX as WdsUiJsx } from "@wds/ui.stencil";
+declare global {}
 
-declare global {
-  namespace JSX {
-    interface IntrinsicElements extends WdsUiJsx.IntrinsicElements {}
+declare namespace JSX {
+  interface IntrinsicElements {
+    [tagName: string]: unknown;
   }
 }

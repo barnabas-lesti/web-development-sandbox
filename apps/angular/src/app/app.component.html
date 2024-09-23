@@ -198,17 +198,18 @@
 <main class="main">
   <div class="content">
     <div>
-      <button (click)="onNativeButtonClick()">Native button</button>
-      <sui-button
+      <wds-button
         aria-label="Button aria label."
-        (click)="onWebComponentButtonClick()"
+        (click)="onWdsButtonClick()"
       >
-        Stencil button
-      </sui-button>
-      <sui-input
+        Reset input
+      </wds-button>
+
+      <wds-input
+        ngDefaultControl
+        [(ngModel)]="inputValue"
         aria-label="Input aria label."
         placeholder="Lorem ipsum"
-        (input)="onWebComponentInput($event)"
       />
     </div>
 

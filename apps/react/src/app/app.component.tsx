@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import reactLogo from "./assets/react.svg";
 
@@ -7,21 +7,26 @@ import viteLogo from "/vite.svg";
 import "./app.module.css";
 
 export const AppComponent: React.FC = () => {
-  const [count, setCount] = useState(0);
+  const [inputValue, setInputValue] = useState("");
+
+  useEffect(() => {
+    console.debug(inputValue);
+  }, [inputValue]);
 
   return (
     <>
       <div>
-        <sui-button
+        <wds-button
           aria-label="Button aria label."
-          onClick={() => console.debug("click")}
+          onClick={() => setInputValue("")}
         >
-          Stencil button
-        </sui-button>
-        <sui-input
+          Reset input
+        </wds-button>
+        <wds-input
+          value={inputValue}
+          onInput={(event: Event) => setInputValue((event.target as HTMLInputElement).value)}
           aria-label="Input aria label."
           placeholder="Lorem ipsum"
-          onInput={(event: InputEvent) => console.debug((event.target as HTMLInputElement).value)}
         />
       </div>
       <div>
@@ -50,7 +55,6 @@ export const AppComponent: React.FC = () => {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>

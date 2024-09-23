@@ -7,4 +7,7 @@
  * @type {import('stylelint').Config} */
 export const BASE_WORKSPACE_STYLELINT_CONFIG = {
   extends: "stylelint-config-recommended",
+  rules: {
+    "no-empty-source": null,
+  },
 };

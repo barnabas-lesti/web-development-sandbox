@@ -1,12 +1,19 @@
 import { Component, h } from "@stencil/core";
 
+/**
+ * Project UI button component.
+ */
 @Component({
-  tag: "sui-button",
+  tag: "wds-button",
   styleUrl: "button.component.css",
   shadow: true,
 })
 export class ButtonComponent {
   render() {
-    return <slot />;
+    return (
+      <button>
+        <slot />
+      </button>
+    );
   }
 }

@@ -20,6 +20,7 @@ export const TYPESCRIPT_ESLINT_CONFIG = [
     rules: {
       "@typescript-eslint/consistent-type-imports": ["error", { fixStyle: "inline-type-imports" }],
       "@typescript-eslint/no-empty-object-type": "off",
+      "@typescript-eslint/consistent-indexed-object-style": "off",
     },
   },
   {

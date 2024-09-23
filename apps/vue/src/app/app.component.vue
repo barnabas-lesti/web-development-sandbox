@@ -3,15 +3,9 @@ import { ref, watch } from "vue";
 
 import { HelloWorldComponent } from "./hello-world";
 
-const luiInputValue = ref("");
-const suiInputValue = ref("");
+const inputValue = ref("");
 
-watch(luiInputValue, (newValue, oldValue) => {
-  console.debug("oldValue", oldValue);
-  console.debug("newValue", newValue);
-});
-
-watch(suiInputValue, (newValue, oldValue) => {
+watch(inputValue, (newValue, oldValue) => {
   console.debug("oldValue", oldValue);
   console.debug("newValue", newValue);
 });
@@ -19,39 +13,18 @@ watch(suiInputValue, (newValue, oldValue) => {
 
 <template>
   <div>
-    <lui-button>
-      <button
-        aria-label="Button aria label."
-        @click="() => (luiInputValue = '')"
-      >
-        Reset input
-      </button>
-    </lui-button>
-    <lui-input>
-      <input
-        v-model="luiInputValue"
-        aria-label="Input aria label."
-        placeholder="Lorem ipsum"
-      />
-    </lui-input>
-  </div>
+    <wds-button
+      aria-label="Button aria label."
+      @click="() => (inputValue = '')"
+    >
+      Reset input
+    </wds-button>
 
-  <div>
-    <sui-button>
-      <button
-        aria-label="Button aria label."
-        @click="() => (suiInputValue = '')"
-      >
-        Reset input
-      </button>
-    </sui-button>
-    <sui-input>
-      <input
-        v-model="suiInputValue"
-        aria-label="Input aria label."
-        placeholder="Lorem ipsum"
-      />
-    </sui-input>
+    <wds-input
+      v-model="inputValue"
+      aria-label="Input aria label."
+      placeholder="Lorem ipsum"
+    />
   </div>
 
   <div>

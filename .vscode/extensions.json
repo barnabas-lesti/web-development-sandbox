@@ -7,7 +7,6 @@
     "yzhang.markdown-all-in-one",
     "redhat.vscode-yaml",
     "angular.ng-template",
-    "vue.volar",
-    "bierner.lit-html"
+    "vue.volar"
   ]
 }

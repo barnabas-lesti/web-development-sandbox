@@ -12,7 +12,6 @@
     "vue": "^3.5.6"
   },
   "devDependencies": {
-    "@wds/ui.lit": "*",
     "@wds/ui.stencil": "*",
     "@wds/tools.eslint": "*",
     "@wds/tools.prettier": "*",
