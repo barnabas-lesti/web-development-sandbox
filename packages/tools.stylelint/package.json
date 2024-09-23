@@ -1,0 +1,20 @@
+{
+  "name": "@wds/tools.stylelint",
+  "version": "1.0.0",
+  "description": "Project stylelint tool.",
+  "exports": {
+    ".": "./src/index.mjs"
+  },
+  "scripts": {
+    "lint": "prettier . --check",
+    "lint:fix": "prettier . --write"
+  },
+  "peerDependencies": {
+    "stylelint": "16.x"
+  },
+  "devDependencies": {
+    "@wds/tools.prettier": "*",
+    "stylelint": "^16.9.0",
+    "stylelint-config-recommended": "^14.0.1"
+  }
+}

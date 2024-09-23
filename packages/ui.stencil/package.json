@@ -26,13 +26,14 @@
   "scripts": {
     "build": "stencil build",
     "dev": "stencil build --watch",
-    "lint": "prettier . --check && eslint .",
-    "lint:fix": "prettier . --write && eslint . --fix"
+    "lint": "prettier . --check && stylelint \"**/*.css\" && eslint .",
+    "lint:fix": "prettier . --write && stylelint \"**/*.css\" --fix && eslint . --fix"
   },
   "devDependencies": {
     "@stencil/core": "^4.7.0",
     "@types/node": "^16.18.11",
     "@wds/tools.eslint": "*",
-    "@wds/tools.prettier": "*"
+    "@wds/tools.prettier": "*",
+    "@wds/tools.stylelint": "*"
   }
 }
