@@ -2,10 +2,10 @@ import type { StorybookConfig } from "@storybook/web-components-vite";
 import { dirname, join } from "path";
 
 export default {
-  stories: ["../../../**/*.stories.ts"],
+  stories: ["../../../**/src/**/*.stories.ts"],
   addons: [
-    getAbsolutePath("@storybook/addon-links"),
     getAbsolutePath("@storybook/addon-essentials"),
+    getAbsolutePath("@storybook/addon-themes"),
     getAbsolutePath("@chromatic-com/storybook"),
   ],
   framework: {
