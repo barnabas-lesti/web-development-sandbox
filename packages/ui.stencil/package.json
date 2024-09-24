@@ -31,7 +31,8 @@
     "lint:fix": "prettier . --write && stylelint \"**/*.css\" --fix && eslint . --fix"
   },
   "devDependencies": {
-    "@storybook/html": "^8.3.2",
+    "@storybook/html": "^8.3.3",
+    "@storybook/addon-actions": "^8.3.3",
     "@stencil/core": "^4.7.0",
     "@types/node": "^16.18.11",
     "@wds/tools.eslint": "*",

@@ -1,3 +1,4 @@
+import { withActions } from "@storybook/addon-actions/decorator";
 import { type Meta, type StoryObj } from "@storybook/html";
 
 import { type ButtonComponent } from "./button.component";
@@ -10,6 +11,12 @@ import {
 
 export default {
   title: "wds-button",
+  decorators: [withActions],
+  parameters: {
+    actions: {
+      handles: ["click"],
+    },
+  },
   argTypes: {
     label: {
       type: "string",
@@ -26,16 +33,7 @@ export default {
       options: BUTTON_COMPONENT_MODES,
     },
   },
-  render(args) {
-    return `
-      <wds-button
-        type="${args.type}"
-        mode="${args.mode}"
-      >
-        ${args.label}
-      </wds-button>
-    `;
-  },
+  render: (args) => Object.assign(document.createElement("wds-button"), args),
 } as Meta<ButtonComponent>;
 
 export const Example: StoryObj<ButtonComponent> = {

@@ -12,6 +12,9 @@ export default {
     name: getAbsolutePath("@storybook/web-components-vite"),
     options: {},
   },
+  core: {
+    disableTelemetry: true,
+  },
 } satisfies StorybookConfig;
 
 /**
