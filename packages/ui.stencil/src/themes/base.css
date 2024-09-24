@@ -1,18 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
+  --wds-gap-sm: 1rem;
   --wds-gap: 1.2rem;
 
   --wds-font-family: "Roboto", sans-serif;
+  --wds-font-weight-sm: 400;
   --wds-font-weight: 500;
-  --wds-font-size: 0.875rem;
-  --wds-letter-spacing: 0.02857em;
+  --wds-font-size-sm: 0.875rem;
+  --wds-font-size: 1rem;
+  --wds-line-height: 1.5em;
+  --wds-letter-spacing: 0.03em;
 
   --wds-roundness: 0.25rem;
 
   --wds-background-color: rgb(255, 255, 255);
-  --wds-background-color--hover: rgba(156, 39, 176, 0.04);
-  --wds-on-background-color: rgb(123, 31, 162);
+  --wds-background-color--hover: rgb(215, 212, 212);
+  --wds-on-background-color: rgb(101, 99, 99);
 
   --wds-primary-color: rgb(25, 118, 210);
   --wds-primary-color--hover: rgb(21, 101, 192);
@@ -35,6 +39,8 @@
   --wds-box-shadow--active: rgba(0, 0, 0, 0.2) 0px 5px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px,
     rgba(0, 0, 0, 0.12) 0px 3px 14px 2px;
 
+  --wds-transition-duration-xs: 0.1s;
+  --wds-transition-duration-sm: 0.2s;
   --wds-transition-duration: 0.3s;
 }
 

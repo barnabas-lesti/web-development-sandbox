@@ -6,7 +6,7 @@ button {
   padding: calc(var(--wds-gap) / 2) var(--wds-gap);
 
   font-family: var(--wds-font-family);
-  font-size: var(--wds-font-size);
+  font-size: var(--wds-font-size-sm);
   font-weight: var(--wds-font-weight);
   color: var(--wds-on-secondary-color);
   text-decoration: none;

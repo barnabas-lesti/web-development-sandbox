@@ -8,6 +8,9 @@
   margin: 0px;
   padding: 0px;
 
+  font-family: var(--wds-font-family);
+  font-size: var(--wds-font-size);
+  font-weight: var(--wds-font-weight-sm);
   vertical-align: top;
 
   border: 0px;
@@ -20,27 +23,22 @@
     top: 0px;
     left: 0px;
     transform-origin: left top;
-    transform: translate(14px, 16px) scale(1);
+    transform: translate(var(--wds-gap-sm), var(--wds-gap-sm)) scale(1);
 
     overflow: hidden;
     display: block;
 
-    max-width: calc(100% - 24px);
     padding: 0px;
 
-    font-family: Roboto, Helvetica, Arial, sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.4375em;
-    color: rgba(0, 0, 0, 0.6);
+    line-height: var(--wds-line-height);
+    color: var(--wds-on-secondary-color);
     text-overflow: ellipsis;
-    letter-spacing: 0.00938em;
     white-space: nowrap;
 
     transition:
-      color 200ms cubic-bezier(0, 0, 0.2, 1),
-      transform 200ms cubic-bezier(0, 0, 0.2, 1),
-      max-width 200ms cubic-bezier(0, 0, 0.2, 1);
+      color var(--wds-transition-duration-sm),
+      transform var(--wds-transition-duration-sm),
+      max-width var(--wds-transition-duration-sm);
   }
 
   .input-wrapper {
@@ -53,16 +51,9 @@
 
     box-sizing: border-box;
 
-    font-family: Roboto, Helvetica, Arial, sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.4375em;
-    color: rgba(0, 0, 0, 0.87);
-    letter-spacing: 0.00938em;
+    color: var(--wds-on-secondary-color);
 
-    border-radius: 4px;
-
-    -webkit-box-align: center;
+    border-radius: var(--wds-roundness);
 
     input {
       display: block;
@@ -70,9 +61,9 @@
       box-sizing: content-box;
       width: 100%;
       min-width: 0px;
-      height: 1.4375em;
+      height: var(--wds-line-height);
       margin: 0px;
-      padding: 16.5px 14px;
+      padding: var(--wds-gap-sm);
 
       font: inherit;
       color: currentcolor;
@@ -80,11 +71,6 @@
 
       background: none;
       border: 0px;
-
-      animation-name: mui-auto-fill-cancel;
-      animation-duration: 10ms;
-
-      -webkit-tap-highlight-color: transparent;
 
       &:focus-visible {
         outline: none;
@@ -108,10 +94,12 @@
 
       text-align: left;
 
-      border-color: rgba(0, 0, 0, 0.23);
+      border-color: var(--wds-on-secondary-color);
       border-style: solid;
       border-width: 1px;
       border-radius: inherit;
+
+      transition: border var(--wds-transition-duration-sm);
 
       legend {
         float: unset;
@@ -128,13 +116,13 @@
 
         visibility: hidden;
 
-        transition: max-width 50ms cubic-bezier(0, 0, 0.2, 1);
+        transition: max-width var(--wds-transition-duration-xs);
 
         span {
           display: inline-block;
 
-          padding-right: 5px;
-          padding-left: 5px;
+          padding-right: calc(var(--wds-gap-sm) / 3);
+          padding-left: calc(var(--wds-gap-sm) / 3);
 
           visibility: visible;
           opacity: 0;
@@ -157,6 +145,19 @@
         legend {
           max-width: inherit;
         }
+      }
+    }
+  }
+
+  &.focused {
+    label {
+      color: var(--wds-primary-color);
+    }
+
+    .input-wrapper {
+      fieldset {
+        border-color: var(--wds-primary-color);
+        border-width: 2px;
       }
     }
   }
