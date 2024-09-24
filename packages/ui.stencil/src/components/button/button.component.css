@@ -29,39 +29,39 @@ button {
     color var(--wds-transition-duration),
     border-color var(--wds-transition-duration),
     box-shadow var(--wds-transition-duration);
-}
 
-button:hover {
-  background-color: var(--wds-secondary-color--hover);
-}
+  &:active {
+    box-shadow: var(--wds-box-shadow--active);
+  }
 
-button:active {
-  box-shadow: var(--wds-box-shadow--active);
-}
+  &:hover {
+    background-color: var(--wds-secondary-color--hover);
+  }
 
-button.primary {
-  color: var(--wds-on-primary-color);
-  background-color: var(--wds-primary-color);
-}
+  &.primary {
+    color: var(--wds-on-primary-color);
+    background-color: var(--wds-primary-color);
 
-button.primary:hover {
-  background-color: var(--wds-primary-color--hover);
-}
+    &:hover {
+      background-color: var(--wds-primary-color--hover);
+    }
+  }
 
-button.success {
-  color: var(--wds-on-success-color);
-  background-color: var(--wds-success-color);
-}
+  &.success {
+    color: var(--wds-on-success-color);
+    background-color: var(--wds-success-color);
 
-button.success:hover {
-  background-color: var(--wds-success-color--hover);
-}
+    &:hover {
+      background-color: var(--wds-success-color--hover);
+    }
+  }
 
-button.danger {
-  color: var(--wds-on-danger-color);
-  background-color: var(--wds-danger-color);
-}
+  &.danger {
+    color: var(--wds-on-danger-color);
+    background-color: var(--wds-danger-color);
 
-button.danger:hover {
-  background-color: var(--wds-danger-color--hover);
+    &:hover {
+      background-color: var(--wds-danger-color--hover);
+    }
+  }
 }
