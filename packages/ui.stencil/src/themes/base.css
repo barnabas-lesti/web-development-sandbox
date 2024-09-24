@@ -6,14 +6,6 @@
   --wds-on-secondary-color: rgb(230, 219, 219);
 }
 
-.dark {
-  --wds-background-color: rgb(60, 53, 53);
-  --wds-on-background-color: rgb(230, 219, 219);
-
-  --wds-secondary-color: rgb(230, 219, 219);
-  --wds-on-secondary-color: rgb(60, 53, 53);
-}
-
 body {
   background-color: var(--wds-background-color);
   color: var(--wds-on-background-color);
