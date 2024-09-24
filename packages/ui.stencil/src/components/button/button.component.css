@@ -1,4 +1,67 @@
 button {
-  background-color: var(--wds-secondary-color);
+  cursor: pointer;
+  user-select: none;
+
+  box-sizing: border-box;
+  padding: calc(var(--wds-gap) / 2) var(--wds-gap);
+
+  font-family: var(--wds-font-family);
+  font-size: var(--wds-font-size);
+  font-weight: var(--wds-font-weight);
   color: var(--wds-on-secondary-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: var(--wds-letter-spacing);
+  vertical-align: middle;
+
+  appearance: none;
+  background-color: var(--wds-secondary-color);
+  border-color: initial;
+  border-style: initial;
+  border-width: 0px;
+  border-radius: var(--wds-roundness);
+  border-image: initial;
+  outline: 0px;
+  box-shadow: var(--wds-box-shadow);
+
+  transition:
+    background-color var(--wds-transition-duration),
+    color var(--wds-transition-duration),
+    border-color var(--wds-transition-duration),
+    box-shadow var(--wds-transition-duration);
+}
+
+button:hover {
+  background-color: var(--wds-secondary-color--hover);
+}
+
+button:active {
+  box-shadow: var(--wds-box-shadow--active);
+}
+
+button.primary {
+  color: var(--wds-on-primary-color);
+  background-color: var(--wds-primary-color);
+}
+
+button.primary:hover {
+  background-color: var(--wds-primary-color--hover);
+}
+
+button.success {
+  color: var(--wds-on-success-color);
+  background-color: var(--wds-success-color);
+}
+
+button.success:hover {
+  background-color: var(--wds-success-color--hover);
+}
+
+button.danger {
+  color: var(--wds-on-danger-color);
+  background-color: var(--wds-danger-color);
+}
+
+button.danger:hover {
+  background-color: var(--wds-danger-color--hover);
 }
