@@ -22,6 +22,8 @@
   --wds-danger-color: rgb(214, 49, 49);
   --wds-danger-color--hover: rgb(194, 29, 29);
   --wds-on-danger-color: rgb(255, 255, 255);
+
+  --wds-roundness: 0.25rem;
 }
 
 body {

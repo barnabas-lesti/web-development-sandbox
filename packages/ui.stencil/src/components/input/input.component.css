@@ -1,76 +1,60 @@
 .container {
-  position: relative;
-
   display: inline-flex;
   flex-direction: column;
-
+  position: relative;
   min-width: 0px;
-  margin: 0px;
   padding: 0px;
-
-  font-family: var(--wds-font-family);
-  font-size: var(--wds-font-size);
-  font-weight: var(--wds-font-weight-sm);
-  vertical-align: top;
-
+  margin: 0px;
   border: 0px;
+  vertical-align: top;
+  font-family: var(--wds-font-family);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.4375em;
+  letter-spacing: 0.00938em;
+  color: var(--wds-on-background-color);
 
   label {
-    pointer-events: none;
-
-    position: absolute;
-    z-index: 1;
-    top: 0px;
-    left: 0px;
-    transform-origin: left top;
-    transform: translate(var(--wds-gap-sm), var(--wds-gap-sm)) scale(1);
-
-    overflow: hidden;
     display: block;
-
-    padding: 0px;
-
-    line-height: var(--wds-line-height);
-    color: var(--wds-on-secondary-color);
+    transform-origin: left top;
     text-overflow: ellipsis;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    pointer-events: none;
+    transform: translate(14px, 16px) scale(1);
+    max-width: calc(100% - 24px);
+    padding: 0px;
     white-space: nowrap;
-
+    overflow: hidden;
     transition:
-      color var(--wds-transition-duration-sm),
-      transform var(--wds-transition-duration-sm),
-      max-width var(--wds-transition-duration-sm);
+      color 200ms cubic-bezier(0, 0, 0.2, 1),
+      transform 200ms cubic-bezier(0, 0, 0.2, 1),
+      max-width 200ms cubic-bezier(0, 0, 0.2, 1);
   }
 
   .input-wrapper {
+    box-sizing: border-box;
     cursor: text;
-
-    position: relative;
-
     display: inline-flex;
     align-items: center;
-
-    box-sizing: border-box;
-
-    color: var(--wds-on-secondary-color);
-
+    position: relative;
     border-radius: var(--wds-roundness);
 
     input {
-      display: block;
-
-      box-sizing: content-box;
-      width: 100%;
-      min-width: 0px;
-      height: var(--wds-line-height);
-      margin: 0px;
-      padding: var(--wds-gap-sm);
-
       font: inherit;
-      color: currentcolor;
       letter-spacing: inherit;
-
-      background: none;
+      color: currentcolor;
       border: 0px;
+      box-sizing: content-box;
+      background: none;
+      height: 1.4375em;
+      margin: 0px;
+      display: block;
+      min-width: 0px;
+      width: 100%;
+      padding: 16.5px 14px;
 
       &:focus-visible {
         outline: none;
@@ -78,54 +62,41 @@
     }
 
     fieldset {
-      pointer-events: none;
-
+      text-align: left;
       position: absolute;
-      top: -5px;
-      right: 0px;
       bottom: 0px;
+      right: 0px;
+      top: -5px;
       left: 0px;
-
-      overflow: hidden;
-
+      pointer-events: none;
       min-width: 0%;
       margin: 0px;
       padding: 0px 8px;
-
-      text-align: left;
-
-      border-color: var(--wds-on-secondary-color);
+      border-radius: inherit;
       border-style: solid;
       border-width: 1px;
-      border-radius: inherit;
-
-      transition: border var(--wds-transition-duration-sm);
+      overflow: hidden;
+      border-color: var(--wds-on-background-color);
 
       legend {
         float: unset;
-        overflow: hidden;
-        display: block;
-
         width: auto;
-        max-width: 0.01px;
+        display: block;
         height: 11px;
-        padding: 0px;
-
         font-size: 0.75em;
+        visibility: hidden;
+        max-width: 0.01px;
+        overflow: hidden;
+        padding: 0px;
+        transition: max-width 50ms cubic-bezier(0, 0, 0.2, 1);
         white-space: nowrap;
 
-        visibility: hidden;
-
-        transition: max-width var(--wds-transition-duration-xs);
-
         span {
+          padding-left: 5px;
+          padding-right: 5px;
           display: inline-block;
-
-          padding-right: calc(var(--wds-gap-sm) / 3);
-          padding-left: calc(var(--wds-gap-sm) / 3);
-
-          visibility: visible;
           opacity: 0;
+          visibility: visible;
         }
       }
     }
