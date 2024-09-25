@@ -1,4 +1,4 @@
-.container {
+:host {
   display: inline-flex;
   flex-direction: column;
   position: relative;
@@ -101,35 +101,35 @@
       }
     }
   }
+}
 
-  &.has-value,
-  &.focused {
-    label {
-      pointer-events: auto;
-      user-select: none;
-      transform: translate(14px, -9px) scale(0.75);
-      max-width: calc(133% - 32px);
-    }
+:host(.has-value),
+:host(.focused) {
+  label {
+    pointer-events: auto;
+    user-select: none;
+    transform: translate(14px, -9px) scale(0.75);
+    max-width: calc(133% - 32px);
+  }
 
-    .input-wrapper {
-      fieldset {
-        legend {
-          max-width: inherit;
-        }
+  .input-wrapper {
+    fieldset {
+      legend {
+        max-width: inherit;
       }
     }
   }
+}
 
-  &.focused {
-    label {
-      color: var(--wds-primary-color);
-    }
+:host(.focused) {
+  label {
+    color: var(--wds-primary-color);
+  }
 
-    .input-wrapper {
-      fieldset {
-        border-color: var(--wds-primary-color);
-        border-width: 2px;
-      }
+  .input-wrapper {
+    fieldset {
+      border-color: var(--wds-primary-color);
+      border-width: 2px;
     }
   }
 }

@@ -1,4 +1,4 @@
-import { Component, h, Listen, Prop, State } from "@stencil/core";
+import { Component, h, Host, Listen, Prop, State } from "@stencil/core";
 
 @Component({
   tag: "wds-input",
@@ -24,9 +24,8 @@ export class InputComponent {
 
   render() {
     return (
-      <div
+      <Host
         class={{
-          "container": true,
           "focused": this.isFocused,
           "has-value": !!this.value,
         }}
@@ -41,7 +40,7 @@ export class InputComponent {
             <legend>{this.label && <span>{this.label}</span>}</legend>
           </fieldset>
         </div>
-      </div>
+      </Host>
     );
   }
 }

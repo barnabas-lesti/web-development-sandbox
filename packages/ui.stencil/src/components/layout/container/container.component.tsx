@@ -1,4 +1,4 @@
-import { Component, h } from "@stencil/core";
+import { Component, h, Host } from "@stencil/core";
 
 @Component({
   tag: "wds-container",
@@ -8,9 +8,9 @@ import { Component, h } from "@stencil/core";
 export class ContainerComponent {
   render() {
     return (
-      <div>
+      <Host>
         <slot />
-      </div>
+      </Host>
     );
   }
 }

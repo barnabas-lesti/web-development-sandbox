@@ -11,9 +11,7 @@ import { type ButtonComponentMode, type ButtonComponentType } from "./button.typ
 })
 export class ButtonComponent {
   @Prop() label?: string;
-
   @Prop() type?: ButtonComponentType = DEFAULT_BUTTON_COMPONENT_TYPE;
-
   @Prop() mode?: ButtonComponentMode = DEFAULT_BUTTON_COMPONENT_MODE;
 
   render() {
