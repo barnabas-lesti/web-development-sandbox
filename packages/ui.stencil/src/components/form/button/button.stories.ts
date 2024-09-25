@@ -10,7 +10,7 @@ import {
 } from "./button.const";
 
 export default {
-  title: "wds-button",
+  title: "Form / wds-button",
   decorators: [withActions],
   parameters: {
     actions: {

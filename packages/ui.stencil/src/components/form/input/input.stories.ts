@@ -4,7 +4,7 @@ import { type Meta, type StoryObj } from "@storybook/html";
 import { type InputComponent } from "./input.component";
 
 export default {
-  title: "wds-input",
+  title: "Form / wds-input",
   decorators: [withActions],
   parameters: {
     actions: {

@@ -24,6 +24,7 @@
   --wds-on-danger-color: rgb(255, 255, 255);
 
   --wds-roundness: 0.25rem;
+  --wds-gap: 1rem;
 }
 
 body {
