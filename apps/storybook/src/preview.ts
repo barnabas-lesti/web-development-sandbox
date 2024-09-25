@@ -3,9 +3,9 @@ import { type Preview } from "@storybook/web-components";
 
 import { defineCustomElements } from "@wds/ui.stencil/loader";
 
-defineCustomElements(window);
+import { DEFAULT_THEME_NAME, THEMES_MAP } from "./theme";
 
-import "./index.css";
+defineCustomElements();
 
 export default {
   parameters: {
@@ -14,11 +14,8 @@ export default {
   },
   decorators: [
     withThemeByClassName({
-      defaultTheme: "Dark",
-      themes: {
-        Light: "light",
-        Dark: "dark",
-      },
+      defaultTheme: DEFAULT_THEME_NAME,
+      themes: THEMES_MAP,
     }),
   ],
 } satisfies Preview;

@@ -1,68 +1,46 @@
 <script setup lang="ts">
-import { ref, watch } from "vue";
-
-import { HelloWorldComponent } from "./hello-world";
-
-const inputValue = ref("");
-
-watch(inputValue, (newValue, oldValue) => {
-  console.debug("oldValue", oldValue);
-  console.debug("newValue", newValue);
-});
+import ColumnComponent from "./column.component.vue";
+import ContainerComponent from "./container.component.vue";
 </script>
 
 <template>
-  <div>
-    <wds-button
-      aria-label="Button aria label."
-      @click="() => (inputValue = '')"
-    >
-      Reset input
-    </wds-button>
+  <h1>Vue</h1>
 
-    <wds-input
-      v-model="inputValue"
-      aria-label="Input aria label."
-      placeholder="Lorem ipsum"
-    />
-  </div>
+  <ContainerComponent :style="{ 'margin-bottom': 'var(--wds-gap)' }">
+    <ColumnComponent><div class="box">Default</div></ColumnComponent>
+    <ColumnComponent><div class="box">Default</div></ColumnComponent>
+  </ContainerComponent>
 
-  <div>
-    <a
-      href="https://vitejs.dev"
-      target="_blank"
+  <ContainerComponent>
+    <ColumnComponent
+      :size="3"
+      :size-md="4"
+      :size-lg="6"
     >
-      <img
-        src="/vite.svg"
-        class="logo"
-        alt="Vite logo"
-      />
-    </a>
-    <a
-      href="https://vuejs.org/"
-      target="_blank"
+      <div class="box">sm-3 md-4 lg-6</div>
+    </ColumnComponent>
+    <ColumnComponent
+      :size="6"
+      :size-md="4"
+      :size-lg="4"
     >
-      <img
-        src="./assets/vue.svg"
-        class="logo vue"
-        alt="Vue logo"
-      />
-    </a>
-  </div>
-  <HelloWorldComponent msg="Vite + Vue" />
+      <div class="box">sm-6 md-4 lg-4</div>
+    </ColumnComponent>
+    <ColumnComponent
+      :size="3"
+      :size-md="4"
+      :size-lg="2"
+    >
+      <div class="box">sm-3 md-4 lg-2</div>
+    </ColumnComponent>
+    <ColumnComponent :size-md="6">
+      <div class="box">sm-12 md-6</div>
+    </ColumnComponent>
+  </ContainerComponent>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+.box {
+  background-color: rgb(82, 82, 212);
 }
 </style>

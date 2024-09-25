@@ -17,7 +17,8 @@
       "require": "./loader/index.cjs.js",
       "import": "./loader/index.js",
       "types": "./loader/index.d.ts"
-    }
+    },
+    "./themes/*": "./src/themes/*"
   },
   "files": [
     "dist/",
@@ -26,12 +27,14 @@
   "scripts": {
     "build": "stencil build",
     "dev": "stencil build --watch",
-    "lint": "prettier . --check && stylelint \"**/*.css\" && eslint .",
-    "lint:fix": "prettier . --write && stylelint \"**/*.css\" --fix && eslint . --fix"
+    "lint": "prettier . --check && stylelint \"**/*.{css,scss}\" && eslint .",
+    "lint:fix": "prettier . --write && stylelint \"**/*.{css,scss}\" --fix && eslint . --fix"
   },
   "devDependencies": {
-    "@storybook/html": "^8.3.2",
+    "@storybook/html": "^8.3.3",
+    "@storybook/addon-actions": "^8.3.3",
     "@stencil/core": "^4.7.0",
+    "@stencil/sass": "^3.0.12",
     "@types/node": "^16.18.11",
     "@wds/tools.eslint": "*",
     "@wds/tools.prettier": "*",
