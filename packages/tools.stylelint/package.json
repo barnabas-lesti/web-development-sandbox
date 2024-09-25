@@ -16,7 +16,7 @@
     "@wds/tools.prettier": "*",
     "stylelint": "^16.9.0",
     "stylelint-config-recommended": "^14.0.1",
-    "stylelint-scss": "^6.7.0",
+    "stylelint-config-standard-scss": "^13.1.0",
     "stylelint-config-clean-order": "^6.1.0"
   }
 }

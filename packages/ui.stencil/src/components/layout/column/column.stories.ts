@@ -12,9 +12,9 @@ export default {
     void args;
     return `
       <wds-container>
-        <wds-column size="2"><div class="box">Box 1</div></wds-column>
-        <wds-column size="8"><div class="box">Box 1</div></wds-column>
-        <wds-column size="2"><div class="box">Box 1</div></wds-column>
+        <wds-column size-md="6" size-lg="4"><div class="box">Box 1</div></wds-column>
+        <wds-column size-md="6" size-lg="4"><div class="box">Box 1</div></wds-column>
+        <wds-column size-md="12" size-lg="4"><div class="box">Box 1</div></wds-column>
       </wds-container>
     `;
   },

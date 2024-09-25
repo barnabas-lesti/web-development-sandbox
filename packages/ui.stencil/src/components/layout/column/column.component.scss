@@ -1,127 +1,35 @@
+$maximum-column-size: 12;
+
+@mixin create-size-classes($class-prefix) {
+  @for $size from 1 through $maximum-column-size {
+    :host(.#{$class-prefix}-#{$size}) {
+      --wds-column-size: #{$size};
+    }
+  }
+}
+
 :host {
-  --wds-column-size: 12;
+  --wds-column-size: #{$maximum-column-size};
 
   display: flex;
   flex-basis: auto;
   flex-grow: 0;
-  width: calc(100% * var(--wds-column-size) / 12 - (12 - var(--wds-column-size)) * (var(--wds-gap) / 12));
+  width: calc(
+    100% * var(--wds-column-size) / $maximum-column-size - ($maximum-column-size - var(--wds-column-size)) *
+      (var(--wds-gap) / $maximum-column-size)
+  );
 
   ::slotted(*) {
     width: 100%;
   }
 }
 
-.sm-1 {
-  --wds-column-size: 1;
-}
-:host(.sm-2) {
-  --wds-column-size: 2;
-}
-.sm-3 {
-  --wds-column-size: 3;
-}
-.sm-4 {
-  --wds-column-size: 4;
-}
-.sm-5 {
-  --wds-column-size: 5;
-}
-.sm-6 {
-  --wds-column-size: 6;
-}
-.sm-7 {
-  --wds-column-size: 7;
-}
-:host(.sm-8) {
-  --wds-column-size: 8;
-}
-.sm-9 {
-  --wds-column-size: 9;
-}
-.sm-10 {
-  --wds-column-size: 10;
-}
-.sm-11 {
-  --wds-column-size: 11;
-}
-.sm-12 {
-  --wds-column-size: 12;
+@include create-size-classes("sm");
+
+@media only screen and (width >= $screen-size-md) {
+  @include create-size-classes("md");
 }
 
-@media only screen and (min-width: 600px) {
-  .md-1 {
-    --wds-column-size: 1;
-  }
-  .md-2 {
-    --wds-column-size: 2;
-  }
-  .md-3 {
-    --wds-column-size: 3;
-  }
-  .md-4 {
-    --wds-column-size: 4;
-  }
-  .md-5 {
-    --wds-column-size: 5;
-  }
-  .md-6 {
-    --wds-column-size: 6;
-  }
-  .md-7 {
-    --wds-column-size: 7;
-  }
-  .md-8 {
-    --wds-column-size: 8;
-  }
-  .md-9 {
-    --wds-column-size: 9;
-  }
-  .md-10 {
-    --wds-column-size: 10;
-  }
-  .md-11 {
-    --wds-column-size: 11;
-  }
-  .md-12 {
-    --wds-column-size: 12;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .lg-1 {
-    --wds-column-size: 1;
-  }
-  .lg-2 {
-    --wds-column-size: 2;
-  }
-  .lg-3 {
-    --wds-column-size: 3;
-  }
-  .lg-4 {
-    --wds-column-size: 4;
-  }
-  .lg-5 {
-    --wds-column-size: 5;
-  }
-  .lg-6 {
-    --wds-column-size: 6;
-  }
-  .lg-7 {
-    --wds-column-size: 7;
-  }
-  .lg-8 {
-    --wds-column-size: 8;
-  }
-  .lg-9 {
-    --wds-column-size: 9;
-  }
-  .lg-10 {
-    --wds-column-size: 10;
-  }
-  .lg-11 {
-    --wds-column-size: 11;
-  }
-  .lg-12 {
-    --wds-column-size: 12;
-  }
+@media only screen and (width >= $screen-size-lg) {
+  @include create-size-classes("lg");
 }
