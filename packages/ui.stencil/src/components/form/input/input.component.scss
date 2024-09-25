@@ -4,27 +4,27 @@
   display: inline-flex;
   flex-direction: column;
 
-  min-width: 0px;
-  margin: 0px;
-  padding: 0px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
 
   font-family: var(--wds-font-family);
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.4375em;
   color: var(--wds-on-background-color);
-  letter-spacing: 0.00938em;
+  letter-spacing: 0.0094em;
   vertical-align: top;
 
-  border: 0px;
+  border: 0;
 
   label {
     pointer-events: none;
 
     position: absolute;
     z-index: 1;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     transform-origin: left top;
     transform: translate(14px, 16px) scale(1);
 
@@ -32,7 +32,7 @@
     display: block;
 
     max-width: calc(100% - 24px);
-    padding: 0px;
+    padding: 0;
 
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -60,9 +60,9 @@
 
       box-sizing: content-box;
       width: 100%;
-      min-width: 0px;
+      min-width: 0;
       height: 1.4375em;
-      margin: 0px;
+      margin: 0;
       padding: 16.5px 14px;
 
       font: inherit;
@@ -70,7 +70,7 @@
       letter-spacing: inherit;
 
       background: none;
-      border: 0px;
+      border: 0;
 
       &:focus-visible {
         outline: none;
@@ -81,16 +81,13 @@
       pointer-events: none;
 
       position: absolute;
-      top: -5px;
-      right: 0px;
-      bottom: 0px;
-      left: 0px;
+      inset: -5px 0 0;
 
       overflow: hidden;
 
       min-width: 0%;
-      margin: 0px;
-      padding: 0px 8px;
+      margin: 0;
+      padding: 0 8px;
 
       text-align: left;
 
@@ -107,7 +104,7 @@
         width: auto;
         max-width: 0.01px;
         height: 11px;
-        padding: 0px;
+        padding: 0;
 
         font-size: 0.75em;
         white-space: nowrap;

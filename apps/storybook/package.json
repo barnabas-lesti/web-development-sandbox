@@ -4,13 +4,12 @@
   "scripts": {
     "dev": "storybook dev -c src -p 6006 --no-open",
     "build": "storybook build -c src -o dist",
-    "lint": "prettier . --check && stylelint \"**/*.css\" && eslint .",
-    "lint:fix": "prettier . --write && stylelint \"**/*.css\" --fix && eslint . --fix"
+    "lint": "prettier . --check && eslint .",
+    "lint:fix": "prettier . --write && eslint . --fix"
   },
   "devDependencies": {
     "@wds/tools.eslint": "*",
     "@wds/tools.prettier": "*",
-    "@wds/tools.stylelint": "*",
     "@wds/ui.stencil": "*",
     "@chromatic-com/storybook": "^1.9.0",
     "@storybook/addon-essentials": "^8.3.3",

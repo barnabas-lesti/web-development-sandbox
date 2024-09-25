@@ -16,5 +16,5 @@ export const THEMES_MAP: Record<string, string> = THEME_NAMES.reduce(
 type AvailableThemeName = (typeof THEME_NAMES)[number];
 
 function createThemeClassName(themeName: string): string {
-  return `theme--${themeName.toLowerCase()}`;
+  return `theme-${themeName.toLowerCase()}`;
 }

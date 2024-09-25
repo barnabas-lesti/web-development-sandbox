@@ -1,28 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap";
 
 :root {
   --wds-font-family: "Roboto", sans-serif;
-
-  --wds-background-color: rgb(25, 29, 32);
-  --wds-background-color--hover: rgb(22, 25, 27);
-  --wds-on-background-color: rgb(211, 204, 204);
-
-  --wds-primary-color: rgb(21, 101, 192);
-  --wds-primary-color--hover: rgb(66, 165, 245);
-  --wds-on-primary-color: rgba(0, 0, 0, 0.87);
-
+  --wds-background-color: rgb(25 29 32);
+  --wds-background-color-hover: rgb(22 25 27);
+  --wds-on-background-color: rgb(211 204 204);
+  --wds-primary-color: rgb(66 165 245);
+  --wds-primary-color-hover: rgb(21 101 192);
+  --wds-on-primary-color: rgb(0 0 0 / 87%);
   --wds-secondary-color: var(--wds-background-color);
-  --wds-secondary-color--hover: var(--wds-background-color--hover);
+  --wds-secondary-color-hover: var(--wds-background-color-hover);
   --wds-on-secondary-color: var(--wds-on-background-color);
-
-  --wds-success-color: rgb(50, 162, 6);
-  --wds-success-color--hover: rgb(41, 135, 4);
-  --wds-on-success-color: rgb(255, 255, 255);
-
-  --wds-danger-color: rgb(214, 49, 49);
-  --wds-danger-color--hover: rgb(194, 29, 29);
-  --wds-on-danger-color: rgb(255, 255, 255);
-
+  --wds-success-color: rgb(50 162 6);
+  --wds-success-color-hover: rgb(41 135 4);
+  --wds-on-success-color: rgb(255 255 255);
+  --wds-danger-color: rgb(214 49 49);
+  --wds-danger-color-hover: rgb(194 29 29);
+  --wds-on-danger-color: rgb(255 255 255);
   --wds-roundness: 0.25rem;
   --wds-gap: 1rem;
 }
