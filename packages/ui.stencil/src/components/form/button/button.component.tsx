@@ -5,7 +5,7 @@ import { type ButtonComponentMode, type ButtonComponentType } from "./button.typ
 
 @Component({
   tag: "wds-button",
-  styleUrl: "./button.component.css",
+  styleUrl: "./button.component.scss",
   shadow: true,
   formAssociated: true,
 })

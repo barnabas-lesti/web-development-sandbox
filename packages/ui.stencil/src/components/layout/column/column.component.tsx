@@ -2,7 +2,7 @@ import { Component, h, Host, Prop } from "@stencil/core";
 
 @Component({
   tag: "wds-column",
-  styleUrl: "./column.component.css",
+  styleUrl: "./column.component.scss",
   shadow: true,
 })
 export class ColumnComponent {

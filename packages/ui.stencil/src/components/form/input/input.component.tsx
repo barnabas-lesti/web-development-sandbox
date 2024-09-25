@@ -2,7 +2,7 @@ import { Component, h, Host, Listen, Prop, State } from "@stencil/core";
 
 @Component({
   tag: "wds-input",
-  styleUrl: "./input.component.css",
+  styleUrl: "./input.component.scss",
   shadow: true,
   formAssociated: true,
 })

@@ -18,8 +18,8 @@ export default BASE_WORKSPACE_STYLELINT_CONFIG;
 ```json
 {
   "scripts": {
-    "lint": "stylelint \"**/*.css\"",
-    "lint:fix": "stylelint \"**/*.css\" --fix"
+    "lint": "stylelint \"**/*.{css,scss}\"",
+    "lint:fix": "stylelint \"**/*.{css,scss}\" --fix"
   }
 }
 ```
