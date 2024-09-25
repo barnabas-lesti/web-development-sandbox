@@ -1,12 +1,6 @@
 {
   "version": "0.2",
   "language": "en",
-  "words": [
-    "devkit",
-    "nocheck",
-    "prerender",
-    "stylelint",
-    "Turborepo"
-  ],
+  "words": ["devkit", "nocheck", "prerender", "stylelint", "Turborepo"],
   "flagWords": []
 }

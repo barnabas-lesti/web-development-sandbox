@@ -1,33 +1,39 @@
 button {
+  cursor: pointer;
+  user-select: none;
+
+  position: relative;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+
   box-sizing: border-box;
-  cursor: pointer;
-  user-select: none;
-  vertical-align: middle;
-  appearance: none;
-  font-family: var(--wds-font-family);
-  font-weight: 500;
-  font-size: 0.875rem;
-  line-height: 1.75;
-  letter-spacing: 0.02857em;
-  text-transform: uppercase;
   min-width: 64px;
+  margin: 0px;
+  padding: 6px 16px;
+
+  font-family: var(--wds-font-family);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.75;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.02857em;
+  vertical-align: middle;
+
+  appearance: none;
+  border-color: initial;
+  border-style: initial;
+  border-width: 0px;
+  border-radius: var(--wds-roundness);
+  border-image: initial;
+  outline: 0px;
   box-shadow:
     rgba(0, 0, 0, 0.2) 0px 3px 1px -2px,
     rgba(0, 0, 0, 0.14) 0px 2px 2px 0px,
     rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
-  outline: 0px;
-  margin: 0px;
-  text-decoration: none;
-  padding: 6px 16px;
-  border-width: 0px;
-  border-style: initial;
-  border-color: initial;
-  border-image: initial;
-  border-radius: var(--wds-roundness);
+
   transition:
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
