@@ -1,7 +1,8 @@
 import { withActions } from "@storybook/addon-actions/decorator";
 import { type Meta, type StoryObj } from "@storybook/html";
 
-import { type InputComponent } from "./input.component";
+import { type WdsInputComponent } from "./input.component";
+import { DEFAULT_WDS_INPUT_TYPE, WDS_INPUT_TYPES } from "./input.const";
 
 export default {
   title: "Form / wds-input",
@@ -20,13 +21,19 @@ export default {
       type: "string",
       control: { type: "text" },
     },
+    type: {
+      type: "string",
+      control: { type: "select" },
+      options: WDS_INPUT_TYPES,
+    },
   },
   render: (args) => Object.assign(document.createElement("wds-input"), args),
-} as Meta<InputComponent>;
+} as Meta<WdsInputComponent>;
 
-export const Example: StoryObj<InputComponent> = {
+export const Example: StoryObj<WdsInputComponent> = {
   args: {
     label: "Lorem ipsum",
     value: "",
+    type: DEFAULT_WDS_INPUT_TYPE,
   },
 };

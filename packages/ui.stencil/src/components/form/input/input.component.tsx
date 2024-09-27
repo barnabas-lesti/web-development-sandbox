@@ -1,4 +1,7 @@
-import { Component, h, Host, Listen, Prop, State } from "@stencil/core";
+import { Component, h, Host, Method, Prop, State } from "@stencil/core";
+
+import { DEFAULT_WDS_INPUT_TYPE } from "./input.const";
+import { type WdsInputType, type WdsInputValidatorArray } from "./input.types";
 
 @Component({
   tag: "wds-input",
@@ -6,40 +9,81 @@ import { Component, h, Host, Listen, Prop, State } from "@stencil/core";
   shadow: true,
   formAssociated: true,
 })
-export class InputComponent {
+export class WdsInputComponent {
   @Prop({ reflect: true, mutable: true }) value: string;
   @Prop() label?: string;
+  @Prop() type?: WdsInputType = DEFAULT_WDS_INPUT_TYPE;
+  @Prop() validators?: WdsInputValidatorArray = [];
 
   @State() private isFocused = false;
+  @State() private errorMessages: string[] = [];
+  @State() private oldValue: string | undefined;
 
-  @Listen("focus")
-  focusEventHandler() {
+  @Method()
+  async setValidators(validators: WdsInputValidatorArray) {
+    this.validators = validators;
+  }
+
+  private hasErrors(): boolean {
+    return this.errorMessages.length > 0;
+  }
+
+  private onInputFocus() {
     this.isFocused = true;
   }
 
-  @Listen("blur")
-  blurEventHandler() {
+  private onInputBlur() {
     this.isFocused = false;
+  }
+
+  private onInputInput(event: InputEvent) {
+    this.oldValue = this.value;
+    this.value = (event.target as HTMLInputElement).value;
+  }
+
+  private onInputChange() {
+    this.validateInput();
+  }
+
+  private validateInput(): void {
+    this.errorMessages = [];
+    for (const validator of this.validators) {
+      if (!validator.validatorFunction(this.value, this.oldValue)) {
+        this.errorMessages = [...this.errorMessages, validator.errorMessage];
+      }
+    }
   }
 
   render() {
     return (
       <Host
         class={{
-          "focused": this.isFocused,
           "has-value": !!this.value,
+          "is-focused": this.isFocused,
+          "is-invalid": this.hasErrors(),
         }}
       >
         {this.label && <label>{this.label}</label>}
-        <div class="input-wrapper">
+        <div class="input-container">
           <input
             value={this.value}
-            onInput={(event) => (this.value = (event.target as HTMLInputElement).value)}
+            type={this.type}
+            onInput={this.onInputInput.bind(this)}
+            onChange={this.onInputChange.bind(this)}
+            onFocus={this.onInputFocus.bind(this)}
+            onBlur={this.onInputBlur.bind(this)}
           />
           <fieldset>
             <legend>{this.label && <span>{this.label}</span>}</legend>
           </fieldset>
         </div>
+        {this.hasErrors() && (
+          <div class="error-container">
+            {this.errorMessages.map((errorMessage) => (
+              <p>{errorMessage}</p>
+            ))}
+          </div>
+        )}
       </Host>
     );
   }

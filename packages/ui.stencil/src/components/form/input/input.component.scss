@@ -43,7 +43,7 @@
       max-width 200ms cubic-bezier(0, 0, 0.2, 1);
   }
 
-  .input-wrapper {
+  .input-container {
     cursor: text;
 
     position: relative;
@@ -63,7 +63,7 @@
       min-width: 0;
       height: 1.4375em;
       margin: 0;
-      padding: 16.5px 14px;
+      padding: var(--wds-gap);
 
       font: inherit;
       color: currentcolor;
@@ -125,10 +125,19 @@
       }
     }
   }
+
+  .error-container {
+    p {
+      margin: var(--wds-gap-xs) var(--wds-gap) 0;
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: var(--wds-error-color);
+    }
+  }
 }
 
 :host(.has-value),
-:host(.focused) {
+:host(.is-focused) {
   label {
     pointer-events: auto;
     user-select: none;
@@ -136,7 +145,7 @@
     max-width: calc(133% - 32px);
   }
 
-  .input-wrapper {
+  .input-container {
     fieldset {
       legend {
         max-width: inherit;
@@ -145,14 +154,27 @@
   }
 }
 
-:host(.focused) {
+:host(.is-focused) {
   label {
     color: var(--wds-primary-color);
   }
 
-  .input-wrapper {
+  .input-container {
     fieldset {
       border-color: var(--wds-primary-color);
+      border-width: 2px;
+    }
+  }
+}
+
+:host(.is-invalid) {
+  label {
+    color: var(--wds-error-color);
+  }
+
+  .input-container {
+    fieldset {
+      border-color: var(--wds-error-color);
       border-width: 2px;
     }
   }

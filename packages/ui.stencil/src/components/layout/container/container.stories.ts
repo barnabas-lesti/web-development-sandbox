@@ -1,6 +1,6 @@
 import { type Meta, type StoryObj } from "@storybook/html";
 
-import { type ContainerComponent } from "./container.component";
+import { type WdsContainerComponent } from "./container.component";
 
 import "./container.stories.css";
 
@@ -18,8 +18,8 @@ export default {
       </wds-container>
     `;
   },
-} as Meta<ContainerComponent>;
+} as Meta<WdsContainerComponent>;
 
-export const Example: StoryObj<ContainerComponent> = {
+export const Example: StoryObj<WdsContainerComponent> = {
   args: {},
 };

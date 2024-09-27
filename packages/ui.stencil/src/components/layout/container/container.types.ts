@@ -1,3 +1,3 @@
-import { type CONTAINER_COMPONENT_DIRECTIONS } from "./container.const";
+import { type WDS_CONTAINER_DIRECTIONS } from "./container.const";
 
-export type ContainerComponentDirection = (typeof CONTAINER_COMPONENT_DIRECTIONS)[number];
+export type WdsContainerDirection = (typeof WDS_CONTAINER_DIRECTIONS)[number];

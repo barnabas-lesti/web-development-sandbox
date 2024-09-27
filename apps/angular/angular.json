@@ -31,7 +31,7 @@
                 "input": "src/public"
               }
             ],
-            "styles": ["src/index.scss"],
+            "styles": ["@wds/ui.stencil/themes/base.css", "src/index.scss"],
             "scripts": []
           },
           "configurations": {

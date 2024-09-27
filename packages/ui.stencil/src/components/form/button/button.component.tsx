@@ -1,7 +1,7 @@
 import { Component, h, Prop } from "@stencil/core";
 
-import { DEFAULT_BUTTON_COMPONENT_MODE, DEFAULT_BUTTON_COMPONENT_TYPE } from "./button.const";
-import { type ButtonComponentMode, type ButtonComponentType } from "./button.types";
+import { DEFAULT_WDS_BUTTON_MODE, DEFAULT_WDS_BUTTON_TYPE } from "./button.const";
+import { type WdsButtonMode, type WdsButtonType } from "./button.types";
 
 @Component({
   tag: "wds-button",
@@ -9,10 +9,10 @@ import { type ButtonComponentMode, type ButtonComponentType } from "./button.typ
   shadow: true,
   formAssociated: true,
 })
-export class ButtonComponent {
+export class WdsButtonComponent {
   @Prop() label?: string;
-  @Prop() type?: ButtonComponentType = DEFAULT_BUTTON_COMPONENT_TYPE;
-  @Prop() mode?: ButtonComponentMode = DEFAULT_BUTTON_COMPONENT_MODE;
+  @Prop() type?: WdsButtonType = DEFAULT_WDS_BUTTON_TYPE;
+  @Prop() mode?: WdsButtonMode = DEFAULT_WDS_BUTTON_MODE;
 
   render() {
     return (

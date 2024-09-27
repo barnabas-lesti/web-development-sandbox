@@ -1,13 +1,8 @@
 import { withActions } from "@storybook/addon-actions/decorator";
 import { type Meta, type StoryObj } from "@storybook/html";
 
-import { type ButtonComponent } from "./button.component";
-import {
-  BUTTON_COMPONENT_MODES,
-  BUTTON_COMPONENT_TYPES,
-  DEFAULT_BUTTON_COMPONENT_MODE,
-  DEFAULT_BUTTON_COMPONENT_TYPE,
-} from "./button.const";
+import { type WdsButtonComponent } from "./button.component";
+import { DEFAULT_WDS_BUTTON_MODE, DEFAULT_WDS_BUTTON_TYPE, WDS_BUTTON_MODES, WDS_BUTTON_TYPES } from "./button.const";
 
 export default {
   title: "Form / wds-button",
@@ -25,21 +20,21 @@ export default {
     type: {
       type: "string",
       control: { type: "select" },
-      options: BUTTON_COMPONENT_TYPES,
+      options: WDS_BUTTON_TYPES,
     },
     mode: {
       type: "string",
       control: { type: "select" },
-      options: BUTTON_COMPONENT_MODES,
+      options: WDS_BUTTON_MODES,
     },
   },
   render: (args) => Object.assign(document.createElement("wds-button"), args),
-} as Meta<ButtonComponent>;
+} as Meta<WdsButtonComponent>;
 
-export const Example: StoryObj<ButtonComponent> = {
+export const Example: StoryObj<WdsButtonComponent> = {
   args: {
     label: "Button",
-    type: DEFAULT_BUTTON_COMPONENT_TYPE,
-    mode: DEFAULT_BUTTON_COMPONENT_MODE,
+    type: DEFAULT_WDS_BUTTON_TYPE,
+    mode: DEFAULT_WDS_BUTTON_MODE,
   },
 };

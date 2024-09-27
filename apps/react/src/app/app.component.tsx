@@ -1,65 +1,31 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 
-import reactLogo from "./assets/react.svg";
-
-import viteLogo from "/vite.svg";
+import { createRequiredValidator } from "@wds/ui.stencil";
 
 import "./app.module.css";
 
 export const AppComponent: React.FC = () => {
-  const [inputValue, setInputValue] = useState("");
+  const firstNameInput = useRef<HTMLWdsInputElement>(null);
 
   useEffect(() => {
-    console.debug(inputValue);
-  }, [inputValue]);
+    firstNameInput.current!.validators = [createRequiredValidator("This react field is required.")];
+  }, []);
 
   return (
     <>
-      <div>
-        <wds-button
-          aria-label="Button aria label."
-          onClick={() => setInputValue("")}
-        >
-          Reset input
-        </wds-button>
-        <wds-input
-          value={inputValue}
-          onInput={(event: Event) => setInputValue((event.target as HTMLInputElement).value)}
-          aria-label="Input aria label."
-          placeholder="Lorem ipsum"
-        />
-      </div>
-      <div>
-        <a
-          href="https://vitejs.dev"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src={viteLogo}
-            className="logo"
-            alt="Vite logo"
+      <h1>React</h1>
+
+      <wds-container>
+        <wds-column>
+          <h2>Example form</h2>
+        </wds-column>
+        <wds-column>
+          <wds-input
+            ref={firstNameInput}
+            label="First name"
           />
-        </a>
-        <a
-          href="https://react.dev"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src={reactLogo}
-            className="logo react"
-            alt="React logo"
-          />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
+        </wds-column>
+      </wds-container>
     </>
   );
 };
