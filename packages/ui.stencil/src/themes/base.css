@@ -22,7 +22,15 @@
 }
 
 body {
+  margin: 0;
+  padding: var(--wds-gap);
+
   font-family: var(--wds-font-family);
   color: var(--wds-on-background-color);
+
   background-color: var(--wds-background-color);
+}
+
+h1 {
+  margin-top: 0;
 }

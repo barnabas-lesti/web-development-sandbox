@@ -3,3 +3,7 @@
   flex-wrap: wrap;
   gap: var(--wds-gap);
 }
+
+:host(.right-to-left) {
+  flex-direction: row-reverse;
+}
