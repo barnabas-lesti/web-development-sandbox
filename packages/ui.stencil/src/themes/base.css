@@ -17,7 +17,12 @@
   --wds-danger-color: rgb(214 49 49);
   --wds-danger-color-hover: rgb(194 29 29);
   --wds-on-danger-color: rgb(255 255 255);
+  --wds-error-color: var(--wds-danger-color);
+  --wds-error-color-hover: var(--wds-danger-color-hover);
+  --wds-on-error-color: var(--wds-on-danger-color);
   --wds-roundness: 0.25rem;
+  --wds-gap-xs: 0.25rem;
+  --wds-gap-sm: 0.5rem;
   --wds-gap: 1rem;
 }
 
