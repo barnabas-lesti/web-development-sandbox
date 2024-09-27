@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
+import { ref } from "vue";
+
+import { type InputComponentValidators } from "@wds/ui.stencil";
 
 const firstNameInputElement = ref(null);
 
-const firstNameInputValidators = [
+const firstNameInputValidators: InputComponentValidators = [
   {
     id: "required",
     errorMessage: "This field is required",
@@ -12,10 +14,6 @@ const firstNameInputValidators = [
     },
   },
 ];
-
-onMounted(() => {
-  firstNameInputElement.value.validators = firstNameInputValidators;
-});
 </script>
 
 <template>
@@ -30,7 +28,7 @@ onMounted(() => {
           <wds-input
             ref="firstNameInputElement"
             label="First name"
-            :validators="firstNameInputValidators"
+            :validators.prop="firstNameInputValidators"
           />
         </wds-column>
         <wds-column size-md="6">
