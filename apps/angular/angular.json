@@ -22,7 +22,10 @@
             "outputPath": "dist/app",
             "index": "src/index.html",
             "browser": "src/index.browser.ts",
-            "polyfills": ["zone.js"],
+            "server": "src/index.server.ts",
+            "ssr": {
+              "entry": "src/index.ssr.ts"
+            },
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -31,7 +34,7 @@
                 "input": "src/public"
               }
             ],
-            "styles": ["@wds/ui.stencil/themes/base.css", "src/index.scss"],
+            "styles": ["src/index.scss"],
             "scripts": []
           },
           "configurations": {

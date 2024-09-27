@@ -1,8 +1,6 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
+import { Component } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { RouterOutlet } from "@angular/router";
-
-import { createRequiredValidator, WdsInputValidatorArray } from "@wds/ui.stencil";
 
 @Component({
   selector: "app-component",
@@ -10,8 +8,9 @@ import { createRequiredValidator, WdsInputValidatorArray } from "@wds/ui.stencil
   styleUrl: "./app.component.scss",
   standalone: true,
   imports: [RouterOutlet, FormsModule],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppComponent {
-  firstNameInputValidators: WdsInputValidatorArray = [createRequiredValidator("This angular field is required.")];
+  foo() {
+    void 0;
+  }
 }
