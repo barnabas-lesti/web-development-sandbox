@@ -1,5 +1,8 @@
 import { Component, h, Host, Listen, Prop, State } from "@stencil/core";
 
+import { DEFAULT_INPUT_COMPONENT_TYPE } from "./input.const";
+import { type InputComponentType } from "./input.types";
+
 @Component({
   tag: "wds-input",
   styleUrl: "./input.component.scss",
@@ -9,6 +12,7 @@ import { Component, h, Host, Listen, Prop, State } from "@stencil/core";
 export class InputComponent {
   @Prop({ reflect: true, mutable: true }) value: string;
   @Prop() label?: string;
+  @Prop() type?: InputComponentType = DEFAULT_INPUT_COMPONENT_TYPE;
 
   @State() private isFocused = false;
 
@@ -35,6 +39,7 @@ export class InputComponent {
           <input
             value={this.value}
             onInput={(event) => (this.value = (event.target as HTMLInputElement).value)}
+            type={this.type}
           />
           <fieldset>
             <legend>{this.label && <span>{this.label}</span>}</legend>
