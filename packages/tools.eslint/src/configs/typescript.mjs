@@ -21,6 +21,7 @@ export const TYPESCRIPT_ESLINT_CONFIG = [
       "@typescript-eslint/consistent-type-imports": ["error", { fixStyle: "inline-type-imports" }],
       "@typescript-eslint/no-empty-object-type": "off",
       "@typescript-eslint/consistent-indexed-object-style": "off",
+      "@typescript-eslint/no-non-null-assertion": "off",
     },
   },
   {
