@@ -1,19 +1,10 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-import { type InputComponentValidators } from "@wds/ui.stencil";
+import { createRequiredValidator, type WdsInputValidatorArray } from "@wds/ui.stencil";
 
 const firstNameInputElement = ref(null);
-
-const firstNameInputValidators: InputComponentValidators = [
-  {
-    id: "required",
-    errorMessage: "This field is required",
-    validatorFunction(newValue: string) {
-      return !!newValue;
-    },
-  },
-];
+const firstNameInputValidators: WdsInputValidatorArray = [createRequiredValidator("This vue field is required.")];
 </script>
 
 <template>

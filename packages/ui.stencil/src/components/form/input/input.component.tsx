@@ -1,7 +1,7 @@
 import { Component, h, Host, Method, Prop, State } from "@stencil/core";
 
-import { DEFAULT_INPUT_COMPONENT_TYPE } from "./input.const";
-import { type InputComponentType, type InputComponentValidators } from "./input.types";
+import { DEFAULT_WDS_INPUT_TYPE } from "./input.const";
+import { type WdsInputType, type WdsInputValidatorArray } from "./input.types";
 
 @Component({
   tag: "wds-input",
@@ -9,18 +9,18 @@ import { type InputComponentType, type InputComponentValidators } from "./input.
   shadow: true,
   formAssociated: true,
 })
-export class InputComponent {
+export class WdsInputComponent {
   @Prop({ reflect: true, mutable: true }) value: string;
   @Prop() label?: string;
-  @Prop() type?: InputComponentType = DEFAULT_INPUT_COMPONENT_TYPE;
-  @Prop() validators?: InputComponentValidators = [];
+  @Prop() type?: WdsInputType = DEFAULT_WDS_INPUT_TYPE;
+  @Prop() validators?: WdsInputValidatorArray = [];
 
   @State() private isFocused = false;
   @State() private errorMessages: string[] = [];
   @State() private oldValue: string | undefined;
 
   @Method()
-  async setValidators(validators: InputComponentValidators) {
+  async setValidators(validators: WdsInputValidatorArray) {
     this.validators = validators;
   }
 

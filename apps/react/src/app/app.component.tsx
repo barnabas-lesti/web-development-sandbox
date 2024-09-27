@@ -1,24 +1,14 @@
 import { useEffect, useRef } from "react";
 
-import { type InputComponentValidators } from "@wds/ui.stencil";
+import { createRequiredValidator } from "@wds/ui.stencil";
 
 import "./app.module.css";
-
-const firstNameInputValidators: InputComponentValidators = [
-  {
-    id: "required",
-    errorMessage: "This field is required",
-    validatorFunction(newValue: string) {
-      return !!newValue;
-    },
-  },
-];
 
 export const AppComponent: React.FC = () => {
   const firstNameInput = useRef<HTMLWdsInputElement>(null);
 
   useEffect(() => {
-    firstNameInput.current!.validators = firstNameInputValidators;
+    firstNameInput.current!.validators = [createRequiredValidator("This react field is required.")];
   }, []);
 
   return (

@@ -1,6 +1,6 @@
 import { type Meta, type StoryObj } from "@storybook/html";
 
-import { type ColumnComponent } from "./column.component";
+import { type WdsColumnComponent } from "./column.component";
 
 export default {
   title: "Layout / wds-column",
@@ -18,8 +18,8 @@ export default {
       </wds-container>
     `;
   },
-} as Meta<ColumnComponent>;
+} as Meta<WdsColumnComponent>;
 
-export const Example: StoryObj<ColumnComponent> = {
+export const Example: StoryObj<WdsColumnComponent> = {
   args: {},
 };

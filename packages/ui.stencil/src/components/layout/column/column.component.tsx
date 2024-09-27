@@ -5,7 +5,7 @@ import { Component, h, Host, Prop } from "@stencil/core";
   styleUrl: "./column.component.scss",
   shadow: true,
 })
-export class ColumnComponent {
+export class WdsColumnComponent {
   @Prop() size?: number;
   @Prop() sizeMd?: number;
   @Prop() sizeLg?: number;

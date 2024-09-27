@@ -1,5 +1,5 @@
-import { type InputComponentType } from "./input.types";
+import { type WdsInputType } from "./input.types";
 
-export const INPUT_COMPONENT_TYPES = ["text"] as const;
+export const WDS_INPUT_TYPES = ["text"] as const;
 
-export const DEFAULT_INPUT_COMPONENT_TYPE: InputComponentType = "text";
+export const DEFAULT_WDS_INPUT_TYPE: WdsInputType = "text";

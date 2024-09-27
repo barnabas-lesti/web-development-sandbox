@@ -1,23 +1,13 @@
 import { Component, h } from "@stencil/core";
 
-import { type InputComponentValidators } from "../input/input.types";
+import { createRequiredValidator } from "../input/input.functions";
 
 @Component({
   tag: "wds-form",
   styleUrl: "./form.component.scss",
   shadow: true,
 })
-export class FormComponent {
-  firstNameInputValidators: InputComponentValidators = [
-    {
-      id: "required",
-      errorMessage: "This field is required",
-      validatorFunction(newValue: string) {
-        return !!newValue;
-      },
-    },
-  ];
-
+export class WdsFormComponent {
   render() {
     return (
       <form>
@@ -25,7 +15,7 @@ export class FormComponent {
           <wds-column>
             <wds-input
               label="First name"
-              validators={this.firstNameInputValidators}
+              validators={[createRequiredValidator()]}
             />
           </wds-column>
         </wds-container>

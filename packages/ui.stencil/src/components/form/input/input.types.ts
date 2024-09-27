@@ -1,11 +1,11 @@
-import { type INPUT_COMPONENT_TYPES } from "./input.const";
+import { type WDS_INPUT_TYPES } from "./input.const";
 
-export type InputComponentType = (typeof INPUT_COMPONENT_TYPES)[number];
+export type WdsInputType = (typeof WDS_INPUT_TYPES)[number];
 
-export interface InputComponentValidator {
+export interface WdsInputValidator {
   id: string;
   errorMessage: string;
   validatorFunction: (newValue: string, oldValue: string) => boolean;
 }
 
-export type InputComponentValidators = InputComponentValidator[];
+export type WdsInputValidatorArray = WdsInputValidator[];
