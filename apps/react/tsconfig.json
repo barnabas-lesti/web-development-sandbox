@@ -18,8 +18,7 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "types": ["vite/client", "@wds/ui.stencil"]
+    "noFallthroughCasesInSwitch": true
   },
   "include": ["src"]
 }
