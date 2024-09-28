@@ -1,6 +1,5 @@
 {
-  "$schema": "https://json.schemastore.org/package",
-  "name": "@wds/ui.react",
+  "name": "@wds/ui.vue",
   "exports": {
     "import": "./dist/index.mjs",
     "types": "./dist/index.d.ts"
@@ -10,10 +9,11 @@
     "dev": "vite build --watch"
   },
   "peerDependencies": {
-    "react": "18.x"
+    "vue": "3.x"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.3.1",
+    "@wds/ui.mitosis": "*",
+    "@vitejs/plugin-vue": "^5.1.4",
     "vite": "^5.4.8",
     "vite-plugin-dts": "^4.2.2",
     "typescript": "^5.5.2"

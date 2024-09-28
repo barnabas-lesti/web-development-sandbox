@@ -3,10 +3,13 @@ import vitePluginVue from "@vitejs/plugin-vue";
 import vitePluginDts from "vite-plugin-dts";
 
 export default defineConfig({
-  plugins: [vitePluginVue(), vitePluginDts({ include: "src" })],
+  plugins: [
+    vitePluginVue(),
+    vitePluginDts({ include: "../ui.mitosis/dist/vue/src" }),
+  ],
   build: {
     lib: {
-      entry: "src/index.ts",
+      entry: "../ui.mitosis/dist/vue/src/index.ts",
       fileName: "index",
       formats: ["es"],
     },

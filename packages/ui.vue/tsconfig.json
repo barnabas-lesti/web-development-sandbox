@@ -15,9 +15,9 @@
     "noEmit": true,
 
     /* Linting */
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"]
+  "include": ["../ui.mitosis/dist/vue/src"]
 }

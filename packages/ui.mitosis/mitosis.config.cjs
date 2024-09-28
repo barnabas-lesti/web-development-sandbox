@@ -1,3 +1,5 @@
+// @ts-check
+
 /**
  * @type {import('@builder.io/mitosis').MitosisConfig}
  */

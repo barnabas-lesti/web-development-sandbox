@@ -1,5 +1,5 @@
 {
-  "$schema": "../../../../node_modules/@angular/cli/lib/config/schema.json",
+  "$schema": "../../node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
     "analytics": false
@@ -7,8 +7,8 @@
   "projects": {
     "lib": {
       "projectType": "library",
-      "root": ".",
-      "sourceRoot": "./src",
+      "root": "../ui.mitosis/dist/angular",
+      "sourceRoot": "../ui.mitosis/dist/angular/src",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",

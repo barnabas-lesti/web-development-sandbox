@@ -1,8 +1,8 @@
 {
   "name": "@wds/ui.mitosis",
   "scripts": {
-    "dev": "watch \"npm run build\" src targets",
-    "build": "node tools/build.cli.mjs",
+    "dev": "watch \"npm run build\" src",
+    "build": "mitosis build --c mitosis.config.cjs",
     "lint": "prettier . --check && eslint .",
     "lint:fix": "prettier . --write && eslint . --fix"
   },

@@ -1,19 +1,19 @@
 {
-  "$schema": "https://json.schemastore.org/package",
   "name": "@wds/ui.angular",
   "exports": {
     "import": "./dist/fesm2022/wds-ui.angular.mjs",
     "types": "./dist/index.d.ts"
   },
   "scripts": {
-    "dev": "watch \"npm run build\" src",
-    "build": "ng build && rimraf dist/package.json"
+    "dev": "watch \"npm run build\" ../ui.mitosis/dist/angular/src",
+    "build": "node tools/build.cli.mjs"
   },
   "peerDependencies": {
     "@angular/common": "18.x",
     "@angular/core": "18.x"
   },
   "devDependencies": {
+    "@wds/ui.mitosis": "*",
     "@angular-devkit/build-angular": "^18.2.1",
     "@angular/cli": "^18.2.0",
     "@angular/compiler-cli": "^18.2.0",

@@ -3,10 +3,13 @@ import vitePluginReact from "@vitejs/plugin-react";
 import vitePluginDts from "vite-plugin-dts";
 
 export default defineConfig({
-  plugins: [vitePluginReact(), vitePluginDts({ include: "src" })],
+  plugins: [
+    vitePluginReact(),
+    vitePluginDts({ include: "../ui.mitosis/dist/react/src" }),
+  ],
   build: {
     lib: {
-      entry: "src/index.ts",
+      entry: "../ui.mitosis/dist/react/src/index.ts",
       fileName: "index",
       formats: ["es"],
     },
@@ -15,5 +18,3 @@ export default defineConfig({
     },
   },
 });
-
-void 0;
