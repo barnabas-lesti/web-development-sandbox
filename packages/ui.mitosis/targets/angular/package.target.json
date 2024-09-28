@@ -6,19 +6,20 @@
     "types": "./dist/index.d.ts"
   },
   "scripts": {
-    "dev": "ng build --watch",
-    "build": "ng build"
+    "dev": "watch \"npm run build\" src",
+    "build": "ng build && rimraf dist/package.json"
   },
   "peerDependencies": {
     "@angular/common": "18.x",
     "@angular/core": "18.x"
   },
   "devDependencies": {
-    "@wds/ui.mitosis": "*",
     "@angular-devkit/build-angular": "^18.2.1",
     "@angular/cli": "^18.2.0",
     "@angular/compiler-cli": "^18.2.0",
     "ng-packagr": "^18.2.0",
-    "typescript": "^5.5.2"
+    "typescript": "^5.5.2",
+    "rimraf": "^5.0.10",
+    "watch": "^1.0.2"
   }
 }
