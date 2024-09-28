@@ -1,0 +1,19 @@
+{
+  "name": "@wds/ui.mitosis",
+  "scripts": {
+    "dev": "watch \"npm run build\" ./src",
+    "build": "mitosis build --c mitosis.config.cjs",
+    "lint": "prettier . --check && eslint .",
+    "lint:fix": "prettier . --write && eslint . --fix"
+  },
+  "dependencies": {
+    "@builder.io/eslint-plugin-mitosis": "^0.0.15",
+    "@builder.io/mitosis": "latest",
+    "@builder.io/mitosis-cli": "latest"
+  },
+  "devDependencies": {
+    "@wds/tools.prettier": "*",
+    "@wds/tools.eslint": "*",
+    "watch": "^1.0.2"
+  }
+}
