@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/package",
   "name": "@wds/ui.angular",
   "exports": {
     "import": "./dist/fesm2022/wds-ui.angular.mjs",
@@ -9,8 +10,8 @@
     "build": "ng build"
   },
   "peerDependencies": {
-    "@angular/common": "^18.2.0",
-    "@angular/core": "^18.2.0"
+    "@angular/common": "18.x",
+    "@angular/core": "18.x"
   },
   "devDependencies": {
     "@wds/ui.mitosis": "*",
@@ -18,6 +19,6 @@
     "@angular/cli": "^18.2.0",
     "@angular/compiler-cli": "^18.2.0",
     "ng-packagr": "^18.2.0",
-    "typescript": "~5.5.2"
+    "typescript": "^5.5.2"
   }
 }

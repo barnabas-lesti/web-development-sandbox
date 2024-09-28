@@ -4,7 +4,7 @@
 module.exports = {
   files: "src/**",
   targets: ["angular", "react", "vue"],
-  dest: "targets",
+  dest: "dist",
   commonOptions: {
     typescript: true,
   },
@@ -12,9 +12,7 @@ module.exports = {
     angular: {
       standalone: true,
     },
-    react: {
-      typescript: true,
-    },
-    vue: { typescript: true, api: "composition" },
+    react: {},
+    vue: { api: "composition" },
   },
 };
