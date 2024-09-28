@@ -4,7 +4,7 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": [".angular", ".stencil", "dist", "loader", "www"]
+      "outputs": [".angular", ".stencil", "dist", "loader"]
     },
     "dev": {
       "cache": false,

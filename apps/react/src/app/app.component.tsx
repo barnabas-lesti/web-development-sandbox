@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 
+import { WdsExample } from "@wds/ui.react";
 import { createRequiredValidator } from "@wds/ui.stencil";
 
 import "./app.module.css";
@@ -14,6 +15,9 @@ export const AppComponent: React.FC = () => {
   return (
     <>
       <h1>React</h1>
+
+      <WdsExample />
+      <WdsExample name="Barna" />
 
       <wds-container>
         <wds-column>

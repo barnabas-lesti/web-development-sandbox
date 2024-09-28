@@ -7,12 +7,11 @@
     "dev:ssr": "turbo dev:ssr",
     "lint": "turbo lint --continue",
     "lint:fix": "turbo lint:fix --continue",
-    "preview": "turbo preview",
-    "ng": "ng"
+    "preview": "turbo preview"
   },
   "workspaces": [
-    "apps/*",
-    "packages/*"
+    "apps/**",
+    "packages/**"
   ],
   "packageManager": "npm@10.5.0",
   "engines": {
@@ -20,7 +19,6 @@
     "npm": ">=10.5.0"
   },
   "devDependencies": {
-    "@angular/cli": "^18.2.4",
     "turbo": "^2.0.14"
   }
 }

@@ -4,7 +4,9 @@
   "words": [
     "compat",
     "devkit",
+    "fesm",
     "nocheck",
+    "packagr",
     "prerender",
     "stylelint",
     "Turborepo"
