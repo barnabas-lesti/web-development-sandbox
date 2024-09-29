@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-import { WdsExample } from "@wds/ui.react";
+import { WdsExample } from "@wds/ui.mitosis/react";
 import { createRequiredValidator } from "@wds/ui.stencil";
 
 import "./app.module.css";

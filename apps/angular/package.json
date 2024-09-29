@@ -26,7 +26,7 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@wds/ui.angular": "*",
+    "@wds/ui.mitosis": "*",
     "@wds/tools.eslint": "*",
     "@wds/tools.prettier": "*",
     "@angular-devkit/build-angular": "^18.2.4",

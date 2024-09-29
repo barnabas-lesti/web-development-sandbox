@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { WdsExample } from "@wds/ui.vue";
+import { WdsExample } from "@wds/ui.mitosis/vue";
 
 import ExampleFormComponent from "./example-form.component.vue";
 </script>
@@ -7,7 +7,8 @@ import ExampleFormComponent from "./example-form.component.vue";
 <template>
   <h1>Vue</h1>
 
-  <WdsExample name="Barna" />
   <WdsExample />
+  <WdsExample name="Barna" />
+
   <ExampleFormComponent />
 </template>

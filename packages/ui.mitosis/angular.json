@@ -7,14 +7,14 @@
   "projects": {
     "lib": {
       "projectType": "library",
-      "root": "../ui.mitosis/dist/angular",
-      "sourceRoot": "../ui.mitosis/dist/angular/src",
+      "root": "./dist/mitosis/angular",
+      "sourceRoot": "./dist/mitosis/angular/src",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "project": "./ng-package.json",
-            "tsConfig": "./tsconfig.json"
+            "tsConfig": "./tsconfig.angular.json"
           }
         }
       }

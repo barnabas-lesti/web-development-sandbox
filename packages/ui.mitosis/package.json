@@ -1,19 +1,46 @@
 {
   "name": "@wds/ui.mitosis",
+  "exports": {
+    "./angular": {
+      "import": "./dist/angular/fesm2022/wds-ui.mitosis.mjs",
+      "types": "./dist/angular/index.d.ts"
+    },
+    "./react": {
+      "import": "./dist/react/index.mjs",
+      "types": "./dist/react/index.d.ts"
+    },
+    "./vue": {
+      "import": "./dist/vue/index.mjs",
+      "types": "./dist/vue/index.d.ts"
+    }
+  },
   "scripts": {
     "dev": "watch \"npm run build\" src",
-    "build": "mitosis build --c mitosis.config.cjs",
+    "build": "npm run build.mitosis && concurrently npm:build.angular npm:build.react npm:build.vue",
+    "build.angular": "node tools/ng-build.cli.mjs",
+    "build.mitosis": "mitosis build --c mitosis.config.cjs",
+    "build.react": "vite build -c vite.config.react.mjs",
+    "build.vue": "vite build -c vite.config.vue.mjs",
     "lint": "prettier . --check && eslint .",
     "lint:fix": "prettier . --write && eslint . --fix"
   },
-  "dependencies": {
-    "@builder.io/eslint-plugin-mitosis": "^0.0.15",
-    "@builder.io/mitosis": "latest",
-    "@builder.io/mitosis-cli": "latest"
-  },
   "devDependencies": {
+    "@builder.io/mitosis": "latest",
+    "@builder.io/mitosis-cli": "latest",
     "@wds/tools.prettier": "*",
     "@wds/tools.eslint": "*",
-    "watch": "^1.0.2"
+    "@angular-devkit/build-angular": "^18.2.1",
+    "@angular/cli": "^18.2.0",
+    "@angular/compiler-cli": "^18.2.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "concurrently": "^9.0.1",
+    "ng-packagr": "^18.2.0",
+    "react": "^18.3.1",
+    "rimraf": "^5.0.10",
+    "vite": "^5.4.8",
+    "vite-plugin-dts": "^4.2.2",
+    "watch": "^1.0.2",
+    "typescript": "^5.5.2"
   }
 }

@@ -12,7 +12,7 @@
     "vue": "^3.5.6"
   },
   "devDependencies": {
-    "@wds/ui.vue": "*",
+    "@wds/ui.mitosis": "*",
     "@wds/ui.stencil": "*",
     "@wds/tools.eslint": "*",
     "@wds/tools.prettier": "*",

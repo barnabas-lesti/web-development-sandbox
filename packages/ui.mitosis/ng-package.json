@@ -1,8 +1,8 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "deleteDestPath": false,
-  "dest": "./dist",
+  "dest": "./dist/angular",
   "lib": {
-    "entryFile": "../ui.mitosis/dist/angular/src/index.ts"
+    "entryFile": "./dist/mitosis/angular/src/index.ts"
   }
 }

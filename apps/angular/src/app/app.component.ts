@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { RouterOutlet } from "@angular/router";
 
-import { WdsExample } from "@wds/ui.angular";
+import { WdsExample } from "@wds/ui.mitosis/angular";
 
 @Component({
   selector: "app-component",

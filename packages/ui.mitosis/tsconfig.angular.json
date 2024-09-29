@@ -17,6 +17,7 @@
     "lib": ["ES2022", "DOM"],
     "declaration": true,
     "inlineSources": true,
+    "inlineSourceMap": true,
     "declarationMap": false
   },
   "angularCompilerOptions": {
@@ -26,5 +27,5 @@
     "strictInputAccessModifiers": true,
     "strictTemplates": true
   },
-  "include": ["../ui.mitosis/dist/angular/src"]
+  "include": ["./dist/mitosis/angular/src"]
 }
