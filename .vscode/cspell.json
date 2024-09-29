@@ -9,7 +9,8 @@
     "packagr",
     "prerender",
     "stylelint",
-    "Turborepo"
+    "Turborepo",
+    "vite"
   ],
   "flagWords": []
 }
