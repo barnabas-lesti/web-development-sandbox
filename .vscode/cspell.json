@@ -2,11 +2,13 @@
   "version": "0.2",
   "language": "en",
   "words": [
+    "clampy",
     "compat",
     "devkit",
     "fesm",
     "nocheck",
     "packagr",
+    "pixi",
     "prerender",
     "stylelint",
     "Turborepo",
