@@ -6,7 +6,9 @@
     "lint": "prettier . --check && eslint .",
     "lint:fix": "prettier . --write && eslint . --fix"
   },
-  "dependencies": {},
+  "dependencies": {
+    "phaser": "^3.85.2"
+  },
   "devDependencies": {
     "@wds/tools.prettier": "*",
     "@wds/tools.eslint": "*",
