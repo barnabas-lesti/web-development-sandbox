@@ -6,7 +6,9 @@
     "build": "vite build",
     "server": "node src/server.mjs",
     "server:dev": "npm run server",
-    "server:prod": "cross-env NODE_ENV=production npm run server"
+    "server:prod": "cross-env NODE_ENV=production npm run server",
+    "lint": "prettier . --check && eslint .",
+    "lint:fix": "prettier . --write && eslint . --fix"
   },
   "dependencies": {
     "compression": "^1.7.4",
