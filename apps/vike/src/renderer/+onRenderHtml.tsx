@@ -2,9 +2,9 @@ import ReactDOMServer from "react-dom/server";
 import { dangerouslySkipEscape, escapeInject } from "vike/server";
 import type { OnRenderHtmlAsync } from "vike/types";
 
-import { getPageTitle } from "./renderer.functions";
-import { PageContextProvider } from "./renderer.providers";
-import logoUrl from "../assets/logo.svg";
+import faviconUrl from "./assets/favicon.svg";
+import { PageContextProvider } from "./page-context/page-context.provider";
+import { getPageTitle } from "./page-title/page-title.functions";
 
 export const onRenderHtml: OnRenderHtmlAsync = async (pageContext): ReturnType<OnRenderHtmlAsync> => {
   const { Page } = pageContext;
@@ -27,7 +27,7 @@ export const onRenderHtml: OnRenderHtmlAsync = async (pageContext): ReturnType<O
     <html lang="en">
       <head>
         <meta charset="UTF-8" />
-        <link rel="icon" href="${logoUrl}" />
+        <link rel="icon" href="${faviconUrl}" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="${desc}" />
         <title>${title}</title>

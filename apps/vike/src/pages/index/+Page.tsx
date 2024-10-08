@@ -1,14 +1,11 @@
-import { CounterComponent } from "../../components/counter";
-import { LinkComponent } from "../../components/link";
+import { LinkComponent } from "../../renderer";
 
 export const Page: React.FC = () => {
   return (
     <>
       <h1>Welcome</h1>
 
-      <p>
-        Interactive. <CounterComponent />
-      </p>
+      <p>Home page.</p>
 
       <h2>Links</h2>
       <ul>

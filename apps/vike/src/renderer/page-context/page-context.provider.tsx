@@ -1,7 +1,7 @@
 import React from "react";
 import type { PageContext } from "vike/types";
 
-import { PAGE_CONTEXT } from "./renderer.const";
+import { PAGE_CONTEXT } from "./page-context.const";
 
 export function PageContextProvider({
   pageContext,

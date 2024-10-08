@@ -1,8 +1,8 @@
 import ReactDOM from "react-dom/client";
 import type { OnRenderClientAsync } from "vike/types";
 
-import { getPageTitle } from "./renderer.functions";
-import { PageContextProvider } from "./renderer.providers";
+import { PageContextProvider } from "./page-context/page-context.provider";
+import { getPageTitle } from "./page-title/page-title.functions";
 
 let root: ReactDOM.Root;
 

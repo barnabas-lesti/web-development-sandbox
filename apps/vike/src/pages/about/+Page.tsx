@@ -1,10 +1,11 @@
-import { LinkComponent } from "../../components/link";
+import { LinkComponent } from "../../renderer";
 
 export const Page: React.FC = () => {
   return (
     <>
       <h1>About</h1>
-      <p>Example of using Vike.</p>
+
+      <p>About page.</p>
 
       <h2>Links</h2>
       <ul>
