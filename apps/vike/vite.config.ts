@@ -1,7 +1,27 @@
 import react from "@vitejs/plugin-react";
-import vike from "vike/plugin";
+import { vavite } from "vavite";
+import ssr from "vike/plugin";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  plugins: [react(), vike()],
+  buildSteps: [
+    {
+      name: "client",
+    },
+    {
+      name: "server",
+      config: {
+        build: { ssr: true },
+      },
+    },
+  ],
+
+  plugins: [
+    vavite({
+      handlerEntry: "/server/index.ts",
+      serveClientAssetsInDev: true,
+    }),
+    react(),
+    ssr({ disableAutoFullBuild: true }),
+  ],
 });

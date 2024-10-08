@@ -11,6 +11,7 @@
     "sirv",
     "stylelint",
     "Turborepo",
+    "vavite",
     "vike",
     "vite"
   ],
