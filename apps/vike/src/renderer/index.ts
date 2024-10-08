@@ -1,2 +1,2 @@
-export { LinkComponent } from "./link/link.component";
-export { usePageContext } from "./page-context/page-context.hooks";
+export { Link } from "./Link";
+export { usePageContext } from "./pageContext";

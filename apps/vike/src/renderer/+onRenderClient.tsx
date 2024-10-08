@@ -1,12 +1,16 @@
 import ReactDOM from "react-dom/client";
 import type { OnRenderClientAsync } from "vike/types";
 
-import { PageContextProvider } from "./page-context/page-context.provider";
-import { getPageTitle } from "./page-title/page-title.functions";
+import { PageContextProvider } from "./pageContext";
+import { getPageTitle } from "./pageTitle";
+
+console.debug("+onRenderClient");
 
 let root: ReactDOM.Root;
 
 export const onRenderClient: OnRenderClientAsync = async (pageContext): ReturnType<OnRenderClientAsync> => {
+  console.debug("onRenderClient()");
+
   const { Page } = pageContext;
 
   // This onRenderClient() hook only supports SSR, see https://vike.dev/render-modes for how to modify onRenderClient()

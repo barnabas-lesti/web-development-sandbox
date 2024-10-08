@@ -1,4 +1,4 @@
-import { LinkComponent } from "../../renderer";
+import { Link } from "../../renderer";
 
 export const Page: React.FC = () => {
   return (
@@ -10,10 +10,10 @@ export const Page: React.FC = () => {
       <h2>Links</h2>
       <ul>
         <li>
-          <LinkComponent href="/">Home</LinkComponent>
+          <Link href="/">Home</Link>
         </li>
         <li>
-          <LinkComponent href="/about">About</LinkComponent>
+          <Link href="/about">About</Link>
         </li>
       </ul>
     </>

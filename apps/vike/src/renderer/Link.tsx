@@ -1,6 +1,6 @@
-import { usePageContext } from "../page-context/page-context.hooks";
+import { usePageContext } from "./pageContext";
 
-export const LinkComponent = (props: { href: string; className?: string; children: React.ReactNode }) => {
+export const Link = (props: { href: string; className?: string; children: React.ReactNode }) => {
   const pageContext = usePageContext();
   const { urlPathname } = pageContext;
   const { href } = props;

@@ -2,11 +2,15 @@ import ReactDOMServer from "react-dom/server";
 import { dangerouslySkipEscape, escapeInject } from "vike/server";
 import type { OnRenderHtmlAsync } from "vike/types";
 
-import faviconUrl from "./assets/favicon.svg";
-import { PageContextProvider } from "./page-context/page-context.provider";
-import { getPageTitle } from "./page-title/page-title.functions";
+import { PageContextProvider } from "./pageContext";
+import { getPageTitle } from "./pageTitle";
+import faviconUrl from "../assets/favicon.svg";
+
+console.debug("+onRenderHtml");
 
 export const onRenderHtml: OnRenderHtmlAsync = async (pageContext): ReturnType<OnRenderHtmlAsync> => {
+  console.debug("onRenderHtml()");
+
   const { Page } = pageContext;
 
   // This onRenderHtml() hook only supports SSR, see https://vike.dev/render-modes for how to modify
