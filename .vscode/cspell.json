@@ -8,8 +8,11 @@
     "nocheck",
     "packagr",
     "prerender",
+    "sirv",
     "stylelint",
     "Turborepo",
+    "vavite",
+    "vike",
     "vite"
   ],
   "flagWords": []
