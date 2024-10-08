@@ -8,7 +8,7 @@ console.debug("+onRenderClient");
 
 let root: ReactDOM.Root;
 
-export const onRenderClient: OnRenderClientAsync = async (pageContext): ReturnType<OnRenderClientAsync> => {
+export const onRenderClient: OnRenderClientAsync = async (pageContext) => {
   console.debug("onRenderClient()");
 
   const { Page } = pageContext;

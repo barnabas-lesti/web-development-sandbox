@@ -1,6 +1,8 @@
 import type { PageContext } from "vike/types";
 
-export function getPageTitle(pageContext: PageContext): string {
+type GetPageTitleFunction = (pageContext: PageContext) => string;
+
+export const getPageTitle: GetPageTitleFunction = (pageContext) => {
   const title =
     // Title defined dynamically by data()
     pageContext.data?.title ||
@@ -9,4 +11,4 @@ export function getPageTitle(pageContext: PageContext): string {
     pageContext.config.title ||
     "Vike Demo";
   return title;
-}
+};

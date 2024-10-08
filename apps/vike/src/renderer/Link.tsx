@@ -1,6 +1,11 @@
 import { usePageContext } from "./pageContext";
 
-export const Link = (props: { href: string; className?: string; children: React.ReactNode }) => {
+type LinkProps = React.PropsWithChildren<{
+  href: string;
+  className?: string;
+}>;
+
+export const Link: React.FC<LinkProps> = (props) => {
   const pageContext = usePageContext();
   const { urlPathname } = pageContext;
   const { href } = props;

@@ -18,7 +18,7 @@ export default defineConfig({
 
   plugins: [
     vavite({
-      handlerEntry: "src/server/index.ts",
+      handlerEntry: "./src/server/index.ts",
       serveClientAssetsInDev: true,
     }),
     react(),

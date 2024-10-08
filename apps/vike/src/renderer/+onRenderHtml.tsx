@@ -8,7 +8,7 @@ import faviconUrl from "../assets/favicon.svg";
 
 console.debug("+onRenderHtml");
 
-export const onRenderHtml: OnRenderHtmlAsync = async (pageContext): ReturnType<OnRenderHtmlAsync> => {
+export const onRenderHtml: OnRenderHtmlAsync = async (pageContext) => {
   console.debug("onRenderHtml()");
 
   const { Page } = pageContext;
