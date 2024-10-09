@@ -22,6 +22,7 @@ export const TYPESCRIPT_ESLINT_CONFIG = [
       "@typescript-eslint/no-empty-object-type": "off",
       "@typescript-eslint/consistent-indexed-object-style": "off",
       "@typescript-eslint/no-non-null-assertion": "off",
+      "@typescript-eslint/no-extraneous-class": "off",
     },
   },
   {
