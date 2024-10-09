@@ -5,6 +5,7 @@
     "compat",
     "devkit",
     "fesm",
+    "nestjs",
     "nocheck",
     "packagr",
     "prerender",
