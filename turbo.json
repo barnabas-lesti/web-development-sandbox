@@ -16,12 +16,8 @@
       "persistent": true,
       "dependsOn": ["build"]
     },
-    "lint": {
-      "dependsOn": ["^lint"]
-    },
-    "lint:fix": {
-      "dependsOn": ["^lint:fix"]
-    },
+    "lint": {},
+    "lint:fix": {},
     "preview": {
       "cache": false,
       "persistent": true,

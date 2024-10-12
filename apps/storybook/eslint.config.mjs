@@ -1,3 +1,8 @@
-import { BASE_WORKSPACE_ESLINT_CONFIG } from "@wds/tools.eslint";
+import { BASE_WORKSPACE_ESLINT_CONFIG, createEslintConfig } from "@wds/tools.eslint";
 
-export default BASE_WORKSPACE_ESLINT_CONFIG;
+export default createEslintConfig(
+  {
+    ignores: ["dist"],
+  },
+  ...BASE_WORKSPACE_ESLINT_CONFIG,
+);

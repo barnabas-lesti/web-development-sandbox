@@ -2,11 +2,9 @@ import eslintPluginUnusedImports from "eslint-plugin-unused-imports";
 
 /**
  * Unused imports eslint plugin configuration.
- *
- * https://github.com/sweepline/eslint-plugin-unused-imports
- * @type {ConfigWithExtends[]}
+ * @type {import('#types').ConfigWithExtends[]}
  */
-export const UNUSED_IMPORTS_ESLINT_CONFIG = [
+export const UNUSED_IMPORTS_ESLINT_PLUGIN_CONFIG = [
   {
     plugins: {
       "unused-imports": eslintPluginUnusedImports,

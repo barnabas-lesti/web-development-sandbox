@@ -1,3 +1,8 @@
-import { REACT_WORKSPACE_ESLINT_CONFIG } from "@wds/tools.eslint";
+import { createEslintConfig, REACT_WORKSPACE_ESLINT_CONFIG } from "@wds/tools.eslint";
 
-export default REACT_WORKSPACE_ESLINT_CONFIG;
+export default createEslintConfig(
+  {
+    ignores: ["dist"],
+  },
+  ...REACT_WORKSPACE_ESLINT_CONFIG,
+);

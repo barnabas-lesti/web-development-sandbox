@@ -1,3 +1,4 @@
-import { BASE_WORKSPACE_ESLINT_CONFIG } from "./src/index.mjs";
+import { createEslintConfig } from "#utility";
+import { BASE_WORKSPACE_ESLINT_CONFIG } from "#workspaces";
 
-export default BASE_WORKSPACE_ESLINT_CONFIG;
+export default createEslintConfig(...BASE_WORKSPACE_ESLINT_CONFIG);

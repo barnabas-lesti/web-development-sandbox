@@ -2,11 +2,9 @@ import eslintPluginJSDoc from "eslint-plugin-jsdoc";
 
 /**
  * JSDoc eslint plugin configuration.
- *
- * https://github.com/gajus/eslint-plugin-jsdoc
- * @type {ConfigWithExtends[]}
+ * @type {import('#types').ConfigWithExtends[]}
  */
-export const JSDOC_ESLINT_CONFIG = [
+export const JSDOC_ESLINT_PLUGIN_CONFIG = [
   {
     files: ["**/*.{ts,tsx,vue,js,cjs,mjs}"],
     extends: [eslintPluginJSDoc.configs["flat/recommended-typescript"]],

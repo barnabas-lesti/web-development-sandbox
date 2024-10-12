@@ -2,13 +2,10 @@ import eslint from "@eslint/js";
 import globals from "globals";
 
 /**
- * Base eslint configuration.
- *
- * https://eslint.org/docs/latest/use/configure/
- * @type {ConfigWithExtends[]}
+ * Eslint plugin configuration.
+ * @type {import('#types').ConfigWithExtends[]}
  */
-export const ESLINT_CONFIG = [
-  { ignores: [".turbo", "dist", "node_modules"] },
+export const ESLINT_PLUGIN_CONFIG = [
   eslint.configs.recommended,
   {
     languageOptions: {

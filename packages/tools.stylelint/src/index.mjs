@@ -1,5 +1,3 @@
-// @ts-check
-
 /**
  * Base workspace stylelint configuration.
  *

@@ -2,11 +2,9 @@ import typescriptEslint from "typescript-eslint";
 
 /**
  * Typescript eslint configuration.
- *
- * https://typescript-eslint.io/rules
- * @type {ConfigWithExtends[]}
+ * @type {import('#types').ConfigWithExtends[]}
  */
-export const TYPESCRIPT_ESLINT_CONFIG = [
+export const TYPESCRIPT_ESLINT_PLUGIN_CONFIG = [
   {
     files: ["**/*.{ts,tsx,vue,js,cjs,mjs}"],
     languageOptions: {

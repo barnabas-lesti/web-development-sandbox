@@ -2,12 +2,9 @@ import angularEslint from "angular-eslint";
 
 /**
  * Angular framework related eslint configuration.
- *
- * https://github.com/angular-eslint/angular-eslint
- * @type {ConfigWithExtends[]}
+ * @type {import('#types').ConfigWithExtends[]}
  */
-export const ANGULAR_ESLINT_CONFIG = [
-  { ignores: [".angular"] },
+export const ANGULAR_ESLINT_PLUGIN_CONFIG = [
   {
     files: ["**/*.ts"],
     extends: [...angularEslint.configs.tsRecommended],

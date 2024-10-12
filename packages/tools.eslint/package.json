@@ -5,6 +5,12 @@
   "exports": {
     ".": "./src/index.mjs"
   },
+  "imports": {
+    "#types": "typescript-eslint",
+    "#plugins": "./src/plugins/index.mjs",
+    "#utility": "./src/utility/index.mjs",
+    "#workspaces": "./src/workspaces/index.mjs"
+  },
   "scripts": {
     "lint": "prettier . --check && eslint .",
     "lint:fix": "prettier . --write && eslint . --fix"
