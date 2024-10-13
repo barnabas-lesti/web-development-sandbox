@@ -2,11 +2,12 @@
   "name": "@wds/vike",
   "type": "module",
   "scripts": {
-    "dev": "vavite serve",
     "build": "vavite build",
-    "preview": "cross-env NODE_ENV=production node dist/server/index.mjs",
+    "build:prod": "npm run build",
     "lint": "prettier . --check && eslint .",
-    "lint:fix": "prettier . --write && eslint . --fix"
+    "lint:fix": "prettier . --write && eslint . --fix",
+    "start": "vavite serve",
+    "start:prod": "cross-env NODE_ENV=production node ./dist/server/index.mjs"
   },
   "dependencies": {
     "cross-env": "^7.0.3",

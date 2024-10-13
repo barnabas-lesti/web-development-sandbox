@@ -2,12 +2,12 @@
   "name": "@wds/root",
   "scripts": {
     "build": "turbo build --concurrency=100%",
+    "build:prod": "turbo build:prod --concurrency=100%",
     "clean": "git clean -Xfd",
-    "dev": "turbo dev",
-    "dev:ssr": "turbo dev:ssr",
     "lint": "turbo lint --continue --concurrency=100%",
     "lint:fix": "turbo lint:fix --continue --concurrency=100%",
-    "preview": "turbo preview"
+    "start": "turbo start",
+    "start:prod": "turbo start:prod"
   },
   "workspaces": [
     "apps/**",

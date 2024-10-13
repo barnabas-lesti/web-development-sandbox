@@ -2,10 +2,10 @@
   "name": "@wds/storybook",
   "version": "0.0.0",
   "scripts": {
-    "dev": "storybook dev -c src -p 3010 --no-open",
     "build": "storybook build -c src -o dist",
     "lint": "prettier . --check && eslint .",
-    "lint:fix": "prettier . --write && eslint . --fix"
+    "lint:fix": "prettier . --write && eslint . --fix",
+    "start": "storybook dev -c src -p 3010 --no-open"
   },
   "devDependencies": {
     "@wds/tools.eslint": "*",

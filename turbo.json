@@ -3,25 +3,22 @@
   "ui": "tui",
   "tasks": {
     "build": {
-      "dependsOn": ["^build"],
-      "outputs": [".angular", ".stencil", "dist", "loader"]
+      "dependsOn": ["^build"]
     },
-    "dev": {
+    "build:prod": {
+      "dependsOn": ["^build:prod"]
+    },
+    "lint": {},
+    "lint:fix": {},
+    "start": {
       "cache": false,
       "persistent": true,
       "dependsOn": ["^build"]
     },
-    "dev:ssr": {
+    "start:prod": {
       "cache": false,
       "persistent": true,
-      "dependsOn": ["build"]
-    },
-    "lint": {},
-    "lint:fix": {},
-    "preview": {
-      "cache": false,
-      "persistent": true,
-      "dependsOn": ["build"]
+      "dependsOn": ["build:prod"]
     }
   }
 }

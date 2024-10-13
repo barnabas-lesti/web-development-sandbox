@@ -15,14 +15,14 @@
     }
   },
   "scripts": {
-    "dev": "watch \"npm run build\" src",
     "build": "npm run build.mitosis && concurrently npm:build.angular npm:build.react npm:build.vue",
     "build.angular": "node tools/ng-build.cli.mjs",
     "build.mitosis": "mitosis build --c mitosis.config.cjs",
     "build.react": "vite build -c vite.config.react.mjs",
     "build.vue": "vite build -c vite.config.vue.mjs",
     "lint": "prettier . --check && eslint .",
-    "lint:fix": "prettier . --write && eslint . --fix"
+    "lint:fix": "prettier . --write && eslint . --fix",
+    "start": "watch \"npm run build\" src"
   },
   "devDependencies": {
     "@builder.io/mitosis": "latest",
