@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { RouterModule } from "@angular/router";
 
 import { WdsExample } from "@wds/ui.mitosis/angular";
 
@@ -6,6 +7,6 @@ import { WdsExample } from "@wds/ui.mitosis/angular";
   selector: "app-home-page",
   templateUrl: "./home.page.html",
   standalone: true,
-  imports: [WdsExample],
+  imports: [WdsExample, RouterModule],
 })
 export class HomePage {}

@@ -17,7 +17,7 @@ export const AppComponent: React.FC = () => {
       <h1>React</h1>
 
       <WdsExample />
-      <WdsExample name="Barna" />
+      <WdsExample name="you" />
 
       <wds-container>
         <wds-column>
