@@ -2,7 +2,7 @@
   "name": "@wds/root",
   "scripts": {
     "build": "turbo build --concurrency=100%",
-    "clean": "git clean -xfd",
+    "clean": "git clean -Xfd",
     "dev": "turbo dev",
     "lint": "turbo lint --continue --concurrency=100%",
     "lint:fix": "turbo lint:fix --continue --concurrency=100%",
