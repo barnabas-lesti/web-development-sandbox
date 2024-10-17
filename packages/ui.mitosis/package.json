@@ -20,9 +20,9 @@
     "build.mitosis": "mitosis build --c mitosis.config.cjs",
     "build.react": "vite build -c vite.config.react.mjs",
     "build.vue": "vite build -c vite.config.vue.mjs",
+    "dev": "watch \"npm run build\" src",
     "lint": "prettier . --check && eslint .",
-    "lint:fix": "prettier . --write && eslint . --fix",
-    "start": "watch \"npm run build\" src"
+    "lint:fix": "prettier . --write && eslint . --fix"
   },
   "devDependencies": {
     "@builder.io/mitosis": "latest",

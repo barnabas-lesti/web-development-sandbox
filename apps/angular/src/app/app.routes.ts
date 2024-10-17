@@ -1,3 +1,12 @@
 import { type Routes } from "@angular/router";
 
-export const APP_ROUTES: Routes = [];
+import { HOME_ROUTES } from "../home";
+
+export const APP_ROUTES: Routes = [
+  ...HOME_ROUTES,
+
+  {
+    path: "**",
+    redirectTo: "/",
+  },
+];

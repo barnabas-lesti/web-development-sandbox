@@ -6,6 +6,8 @@ import { fileURLToPath } from "node:url";
 
 import bootstrap from "./index.server";
 
+const FALLBACK_PORT = 3010;
+
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();
@@ -49,13 +51,13 @@ export function app(): express.Express {
 }
 
 function run(): void {
-  const port = process.env["PORT"] || 3000;
+  const port = process.env["PORT"] || FALLBACK_PORT;
 
   // Start up the Node server
   const server = app();
   server.listen(port, () => {
     // eslint-disable-next-line no-console
-    console.log(`Node Express server listening on http://localhost:${port}`);
+    console.log(`Server listening on http://localhost:${port}`);
   });
 }
 

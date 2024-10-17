@@ -4,6 +4,9 @@
   "tasks": {
     "build": {
       "outputs": ["dist/**"]
+    },
+    "prod": {
+      "dependsOn": ["build"]
     }
   }
 }

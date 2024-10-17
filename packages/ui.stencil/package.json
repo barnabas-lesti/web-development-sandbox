@@ -26,9 +26,9 @@
   ],
   "scripts": {
     "build": "stencil build",
+    "dev": "stencil build --watch",
     "lint": "prettier . --check && stylelint \"**/*.{css,scss}\" && eslint .",
-    "lint:fix": "prettier . --write && stylelint \"**/*.{css,scss}\" --fix && eslint . --fix",
-    "start": "stencil build --watch"
+    "lint:fix": "prettier . --write && stylelint \"**/*.{css,scss}\" --fix && eslint . --fix"
   },
   "devDependencies": {
     "@storybook/html": "^8.3.3",

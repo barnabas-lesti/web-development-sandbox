@@ -3,11 +3,10 @@
   "type": "module",
   "scripts": {
     "build": "vavite build",
-    "build:prod": "npm run build",
+    "dev": "vavite serve",
     "lint": "prettier . --check && eslint .",
     "lint:fix": "prettier . --write && eslint . --fix",
-    "start": "vavite serve",
-    "start:prod": "cross-env NODE_ENV=production node ./dist/server/index.mjs"
+    "prod": "cross-env NODE_ENV=production node ./dist/server/index.mjs"
   },
   "dependencies": {
     "cross-env": "^7.0.3",

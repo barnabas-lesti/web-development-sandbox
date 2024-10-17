@@ -2,11 +2,10 @@
   "name": "@wds/nest",
   "scripts": {
     "build": "nest build",
-    "build:prod": "npm run build",
+    "dev": "nest start --watch",
     "lint": "prettier . --check && eslint .",
     "lint:fix": "prettier . --write && eslint . --fix",
-    "start": "nest start --watch",
-    "start:prod": "node ./dist/main"
+    "prod": "node ./dist/index"
   },
   "dependencies": {
     "@nestjs/common": "^10.3.2",

@@ -3,11 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "build": "vite build",
-    "build:prod": "npm run build",
+    "dev": "vite",
     "lint": "prettier . --check && eslint .",
-    "lint:fix": "prettier . --write && eslint . --fix",
-    "start": "vite",
-    "start:prod": "vite preview"
+    "lint:fix": "prettier . --write && eslint . --fix"
   },
   "dependencies": {
     "react": "^18.3.1",

@@ -5,20 +5,17 @@
     "build": {
       "dependsOn": ["^build"]
     },
-    "build:prod": {
-      "dependsOn": ["^build:prod"]
-    },
-    "lint": {},
-    "lint:fix": {},
-    "start": {
+    "dev": {
       "cache": false,
       "persistent": true,
       "dependsOn": ["^build"]
     },
-    "start:prod": {
+    "lint": {},
+    "lint:fix": {},
+    "prod": {
       "cache": false,
       "persistent": true,
-      "dependsOn": ["build:prod"]
+      "dependsOn": ["^build"]
     }
   }
 }

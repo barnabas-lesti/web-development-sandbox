@@ -3,13 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "build": "ng build",
-    "build:prod": "npm run build -- --configuration production",
+    "dev": "concurrently npm:dev.client npm:dev.server",
+    "dev.client": "ng build --configuration development --watch",
+    "dev.server": "nodemon ./dist/app/server/server.mjs --watch ./dist/app/server/server.mjs",
     "lint": "prettier . --check && eslint .",
     "lint:fix": "prettier . --write && eslint . --fix",
-    "start": "concurrently npm:start.client npm:start.server",
-    "start.client": "ng build --watch",
-    "start.server": "nodemon ./dist/app/server/server.mjs --watch ./dist/app/server/server.mjs",
-    "start:prod": "node ./dist/app/server/server.mjs"
+    "prod": "node ./dist/app/server/server.mjs"
   },
   "dependencies": {
     "@angular/animations": "^18.2.0",

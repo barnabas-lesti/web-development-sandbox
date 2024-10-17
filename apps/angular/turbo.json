@@ -5,7 +5,10 @@
     "build": {
       "outputs": [".angular/**", "dist/**"]
     },
-    "start": {
+    "dev": {
+      "dependsOn": ["build"]
+    },
+    "prod": {
       "dependsOn": ["build"]
     }
   }
