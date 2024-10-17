@@ -1,0 +1,22 @@
+{
+  "name": "@wds/nuxt",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "lint": "prettier . --check && eslint .",
+    "lint:fix": "prettier . --write && eslint . --fix",
+    "prod": "node .output/server/index.mjs",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "nuxt": "^3.13.0",
+    "vue": "^3.5.12",
+    "vue-router": "^4.4.5",
+    "consola": "^3.2.3"
+  },
+  "devDependencies": {
+    "@wds/tools.eslint": "*",
+    "@wds/tools.prettier": "*",
+    "@nuxt/eslint": "^0.6.0"
+  }
+}
