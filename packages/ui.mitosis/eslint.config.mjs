@@ -1,8 +1,21 @@
-import { BASE_WORKSPACE_ESLINT_CONFIG, createEslintConfig } from "@wds/tools.eslint";
+import {
+  ESLINT_CONFIG,
+  JSDOC_ESLINT_CONFIG,
+  PRETTIER_ESLINT_CONFIG,
+  SIMPLE_IMPORT_SORT_ESLINT_CONFIG,
+  TYPESCRIPT_ESLINT_CONFIG,
+  UNUSED_IMPORTS_ESLINT_CONFIG,
+} from "@wds/tools.eslint";
 
-export default createEslintConfig(
-  {
-    ignores: [".angular", "dist"],
-  },
-  ...BASE_WORKSPACE_ESLINT_CONFIG,
-);
+/**
+ * @type {import('eslint').Linter.Config[]}
+ */
+export default [
+  { ignores: [".angular", "dist"] },
+  ...ESLINT_CONFIG,
+  ...TYPESCRIPT_ESLINT_CONFIG,
+  ...JSDOC_ESLINT_CONFIG,
+  ...SIMPLE_IMPORT_SORT_ESLINT_CONFIG,
+  ...UNUSED_IMPORTS_ESLINT_CONFIG,
+  ...PRETTIER_ESLINT_CONFIG,
+];

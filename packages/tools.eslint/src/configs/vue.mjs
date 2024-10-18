@@ -1,12 +1,10 @@
-// @ts-nocheck
-
 import eslintPluginVue from "eslint-plugin-vue";
 
 /**
  * Vue framework eslint configuration.
- * @type {import('#types').ConfigWithExtends[]}
+ * @type {import('eslint').Linter.Config[]}
  */
-export const VUE_ESLINT_PLUGIN_CONFIG = [
+export const VUE_ESLINT_CONFIG = [
   ...eslintPluginVue.configs["flat/recommended"],
   {
     files: ["**/*.vue"],

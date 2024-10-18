@@ -1,10 +1,12 @@
 import typescriptEslint from "typescript-eslint";
 
+import { convertConfigWithExtendsToFlatConfig } from "../utility/index.mjs";
+
 /**
  * Typescript eslint configuration.
- * @type {import('#types').ConfigWithExtends[]}
+ * @type {import('eslint').Linter.Config[]}
  */
-export const TYPESCRIPT_ESLINT_PLUGIN_CONFIG = [
+export const TYPESCRIPT_ESLINT_CONFIG = convertConfigWithExtendsToFlatConfig(
   {
     files: ["**/*.{ts,tsx,vue,js,cjs,mjs}"],
     languageOptions: {
@@ -34,4 +36,4 @@ export const TYPESCRIPT_ESLINT_PLUGIN_CONFIG = [
       "@typescript-eslint/ban-ts-comment": "off",
     },
   },
-];
+);

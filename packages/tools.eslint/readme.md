@@ -6,12 +6,15 @@ Eslint tool workspace where the project linter configuration is defined and can 
 
 1. Add `@wds/tools.eslint` development dependency to the consumer workspace.
 2. Create a `eslint.config.mjs` file in the root of the workspace.
-3. Based on the workspace framework type, import the appropriate workspace configuration, example for an Angular project, use the below content:
+3. Based on the framework and needs, add the required configurations to this file:
 
 ```js
-import { ANGULAR_WORKSPACE_ESLINT_CONFIG } from "@wds/tools.eslint";
+import { ESLINT_CONFIG, JSDOC_ESLINT_CONFIG, PRETTIER_ESLINT_CONFIG } from "@wds/tools.eslint";
 
-export default ANGULAR_WORKSPACE_ESLINT_CONFIG;
+/**
+ * @type {import('eslint').Linter.Config[]}
+ */
+export default [...ESLINT_CONFIG, ...JSDOC_ESLINT_CONFIG, ...PRETTIER_ESLINT_CONFIG];
 ```
 
 4. Add (or update) the `lint` and `lint:fix` scripts to the workspaces `package.json` file:
@@ -24,8 +27,6 @@ export default ANGULAR_WORKSPACE_ESLINT_CONFIG;
   }
 }
 ```
-
-Workspaces should not need more configuration (or update) than the already defined workspace configurations, these are exported and can be found in the [src/index.mjs](./src/index.mjs) entry file.
 
 _Note: The `eslint` package doesn't need to be added to the workspace as a dependency, it's automatically available when the tool is added to the workspace._
 

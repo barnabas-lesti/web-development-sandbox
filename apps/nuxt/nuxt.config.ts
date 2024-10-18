@@ -9,6 +9,9 @@ export default defineNuxtConfig({
   imports: {
     autoImport: false,
   },
+  devServer: {
+    port: 3050,
+  },
 
   // App
   appConfig: {

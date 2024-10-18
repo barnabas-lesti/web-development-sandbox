@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useHead } from "#imports";
+
 import { ExampleComponent } from "../features/example";
 
 useHead({

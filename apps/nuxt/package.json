@@ -5,7 +5,7 @@
     "dev": "nuxt dev",
     "lint": "prettier . --check && eslint .",
     "lint:fix": "prettier . --write && eslint . --fix",
-    "prod": "node .output/server/index.mjs",
+    "prod": "cross-env PORT=3050 node .output/server/index.mjs",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
@@ -17,6 +17,7 @@
   "devDependencies": {
     "@wds/tools.eslint": "*",
     "@wds/tools.prettier": "*",
-    "@nuxt/eslint": "^0.6.0"
+    "@nuxt/eslint": "^0.6.0",
+    "cross-env": "^7.0.3"
   }
 }

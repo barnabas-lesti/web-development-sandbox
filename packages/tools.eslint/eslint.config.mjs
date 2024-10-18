@@ -1,4 +1,18 @@
-import { createEslintConfig } from "#utility";
-import { BASE_WORKSPACE_ESLINT_CONFIG } from "#workspaces";
+import {
+  ESLINT_CONFIG,
+  JSDOC_ESLINT_CONFIG,
+  PRETTIER_ESLINT_CONFIG,
+  SIMPLE_IMPORT_SORT_ESLINT_CONFIG,
+  UNUSED_IMPORTS_ESLINT_CONFIG,
+} from "./src/index.mjs";
 
-export default createEslintConfig(...BASE_WORKSPACE_ESLINT_CONFIG);
+/**
+ * @type {import('eslint').Linter.Config[]}
+ */
+export default [
+  ...ESLINT_CONFIG,
+  ...JSDOC_ESLINT_CONFIG,
+  ...SIMPLE_IMPORT_SORT_ESLINT_CONFIG,
+  ...UNUSED_IMPORTS_ESLINT_CONFIG,
+  ...PRETTIER_ESLINT_CONFIG,
+];

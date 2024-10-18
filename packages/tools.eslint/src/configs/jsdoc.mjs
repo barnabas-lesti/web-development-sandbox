@@ -1,10 +1,12 @@
 import eslintPluginJSDoc from "eslint-plugin-jsdoc";
 
+import { convertConfigWithExtendsToFlatConfig } from "../utility/index.mjs";
+
 /**
  * JSDoc eslint plugin configuration.
- * @type {import('#types').ConfigWithExtends[]}
+ * @type {import('eslint').Linter.Config[]}
  */
-export const JSDOC_ESLINT_PLUGIN_CONFIG = [
+export const JSDOC_ESLINT_CONFIG = convertConfigWithExtendsToFlatConfig(
   {
     files: ["**/*.{ts,tsx,vue,js,cjs,mjs}"],
     extends: [eslintPluginJSDoc.configs["flat/recommended-typescript"]],
@@ -27,4 +29,4 @@ export const JSDOC_ESLINT_PLUGIN_CONFIG = [
       "jsdoc/no-types": "off",
     },
   },
-];
+);

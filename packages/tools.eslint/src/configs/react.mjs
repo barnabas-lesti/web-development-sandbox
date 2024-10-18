@@ -4,9 +4,9 @@ import eslintPluginReactRefresh from "eslint-plugin-react-refresh";
 
 /**
  * React framework eslint configuration.
- * @type {import('#types').ConfigWithExtends[]}
+ * @type {import('eslint').Linter.Config[]}
  */
-export const REACT_ESLINT_PLUGIN_CONFIG = [
+export const REACT_ESLINT_CONFIG = [
   {
     files: ["**/*.{ts,tsx}"],
     languageOptions: {

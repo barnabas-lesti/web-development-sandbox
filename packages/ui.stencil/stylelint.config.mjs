@@ -1,3 +1,3 @@
-import { createStylelintConfig } from "@wds/tools.stylelint";
+import { STYLELINT_CONFIG } from "@wds/tools.stylelint";
 
-export default createStylelintConfig();
+export default STYLELINT_CONFIG;

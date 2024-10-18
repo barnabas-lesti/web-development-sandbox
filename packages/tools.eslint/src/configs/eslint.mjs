@@ -3,9 +3,9 @@ import globals from "globals";
 
 /**
  * Eslint plugin configuration.
- * @type {import('#types').ConfigWithExtends[]}
+ * @type {import('eslint').Linter.Config[]}
  */
-export const ESLINT_PLUGIN_CONFIG = [
+export const ESLINT_CONFIG = [
   eslint.configs.recommended,
   {
     languageOptions: {

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
+
 import { createPerson } from "./example.functions";
 
 const person = createPerson();

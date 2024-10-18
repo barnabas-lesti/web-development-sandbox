@@ -18,7 +18,7 @@ Sandbox monorepo to play around with frameworks and technologies.
 Because the project is a monorepo and uses [Turborepo](https://turbo.build/repo/docs) we should only run scripts from the root. This way we can leverage the powerful caching of Turborepo. For example, if we want to build a workspace that depends on other workspaces built assets, running the `build` script will also build the dependencies in a hierarchical order. This dependency graph (and other monorepo related settings) are defined in the [turbo.json](./turbo.json) file.
 
 1. Install required dependencies with `npm i`.
-2. Start the desired workspace in development mode with for example `npm run dev -- --filter="@wds/vue"`.
+2. Start the desired workspace in development mode with for example `npm run dev -- --filter @wds/vue`.
    - Yes, the piping is interesting, but it's basically how we can pass arguments to an inner script when running npm.
    - For more information on filtering, check out the [docs on filtering with Turborepo](https://turbo.build/repo/docs/crafting-your-repository/running-tasks#using-filters).
 

@@ -1,10 +1,12 @@
 import angularEslint from "angular-eslint";
 
+import { convertConfigWithExtendsToFlatConfig } from "../utility/index.mjs";
+
 /**
  * Angular framework related eslint configuration.
- * @type {import('#types').ConfigWithExtends[]}
+ * @type {import('eslint').Linter.Config[]}
  */
-export const ANGULAR_ESLINT_PLUGIN_CONFIG = [
+export const ANGULAR_ESLINT_CONFIG = convertConfigWithExtendsToFlatConfig(
   {
     files: ["**/*.ts"],
     extends: [...angularEslint.configs.tsRecommended],
@@ -36,4 +38,4 @@ export const ANGULAR_ESLINT_PLUGIN_CONFIG = [
       "@angular-eslint/template/prefer-self-closing-tags": "error",
     },
   },
-];
+);

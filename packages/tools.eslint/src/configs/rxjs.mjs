@@ -3,9 +3,9 @@ import typescriptEslint from "typescript-eslint";
 
 /**
  * RxJS framework related eslint configuration.
- * @type {import('#types').ConfigWithExtends[]}
+ * @type {import('eslint').Linter.Config[]}
  */
-export const RXJS_ESLINT_PLUGIN_CONFIG = [
+export const RXJS_ESLINT_CONFIG = [
   {
     files: ["**/*.{ts,tsx,vue}"],
     languageOptions: {

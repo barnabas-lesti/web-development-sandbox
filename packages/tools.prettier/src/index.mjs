@@ -2,7 +2,7 @@
  * Base workspace prettier configuration.
  * @type {import("prettier").Options}
  */
-export const BASE_PRETTIER_CONFIG = {
+export const PRETTIER_CONFIG = {
   printWidth: 120,
   tabWidth: 2,
   useTabs: false,

@@ -2,9 +2,9 @@ import eslintPluginSimpleImportSort from "eslint-plugin-simple-import-sort";
 
 /**
  * Simple import sort eslint plugin configuration.
- * @type {import('#types').ConfigWithExtends[]}
+ * @type {import('eslint').Linter.Config[]}
  */
-export const SIMPLE_IMPORT_SORT_ESLINT_PLUGIN_CONFIG = [
+export const SIMPLE_IMPORT_SORT_ESLINT_CONFIG = [
   {
     plugins: {
       "simple-import-sort": eslintPluginSimpleImportSort,
