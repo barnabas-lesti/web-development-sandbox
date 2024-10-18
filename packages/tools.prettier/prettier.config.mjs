@@ -1,3 +1,3 @@
-import { createPrettierConfig } from "./src/index.mjs";
+import { BASE_PRETTIER_CONFIG } from "./src/index.mjs";
 
-export default createPrettierConfig();
+export default BASE_PRETTIER_CONFIG;

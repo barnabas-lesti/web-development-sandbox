@@ -1,3 +1,3 @@
-import { createPrettierConfig } from "@wds/tools.prettier";
+import { BASE_PRETTIER_CONFIG } from "@wds/tools.prettier";
 
-export default createPrettierConfig();
+export default BASE_PRETTIER_CONFIG;
