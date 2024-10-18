@@ -1,6 +1,7 @@
 export { ANGULAR_ESLINT_CONFIG } from "./angular.mjs";
 export { ESLINT_CONFIG } from "./eslint.mjs";
 export { JSDOC_ESLINT_CONFIG } from "./jsdoc.mjs";
+export { NEXT_ESLINT_CONFIG } from "./next.mjs";
 export { PRETTIER_ESLINT_CONFIG } from "./prettier.mjs";
 export { REACT_ESLINT_CONFIG } from "./react.mjs";
 export { RXJS_ESLINT_CONFIG } from "./rxjs.mjs";
