@@ -12,6 +12,10 @@
   "devDependencies": {
     "prettier": "^3.8.1"
   },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "packageManager": "bun@0.0.0",
   "engines": {
     "node": "^20",
