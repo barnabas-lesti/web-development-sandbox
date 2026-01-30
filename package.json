@@ -3,14 +3,15 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "",
-    "build": "",
-    "preview": "",
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "preview": "turbo preview",
     "lint": "prettier . --write --cache --cache-location=.prettiercache"
   },
   "dependencies": {},
   "devDependencies": {
-    "prettier": "^3.8.1"
+    "prettier": "^3.8.1",
+    "turbo": "^2.8.0"
   },
   "workspaces": [
     "apps/*",

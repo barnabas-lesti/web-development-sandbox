@@ -19,6 +19,7 @@ Web development example and sandbox project.
 ## Quick start
 
 1. Install required dependencies with `bun i`.
-2. TBD
+2. Start all applications in development mode with `bun run dev`.
+   - To start a specific application you can use `bun run dev --filter <app-name>`
 
 There are of course more scripts available. Check out the [package.json](./package.json) file and the docs for more information.
