@@ -1,0 +1,18 @@
+{
+  "name": "web-development-sandbox",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "",
+    "build": "",
+    "preview": "",
+    "lint": ""
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "packageManager": "bun@0.0.0",
+  "engines": {
+    "node": "^20",
+    "bun": "^1"
+  }
+}

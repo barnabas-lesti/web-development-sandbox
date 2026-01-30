@@ -1,0 +1,24 @@
+# Web Development Sandbox
+
+Web development example and sandbox project.
+
+## Prerequisites
+
+- [Git](https://git-scm.com/)
+  - To commit changes, can be skipped if you just want to check out the app.
+- [NodeJS](https://nodejs.org/)
+  - This will also install `npm`, make sure both are added to the `path` and available in terminal.
+  - It is a good idea to use [NVM](https://github.com/nvm-sh/nvm) (Node Version Manager) to manage NodeJS. It can easily help to switch NodeJS versions when working in multiple repositories.
+- [Visual Studio Code](https://code.visualstudio.com/)
+  - Other IDE can be used of course, but there are added settings for VSCode in the project.
+  - Once the project is opened in VSCode, install the recommended extensions.
+- [Bun](https://bun.sh/)
+  - Faster and more robust package manager compared to `npm`.
+  - **Important**: Don't just `npm i -g bun`, rather install the binary as described in the [docs](https://bun.sh/).
+
+## Quick start
+
+1. Install required dependencies with `bun i`.
+2. TBD
+
+There are of course more scripts available. Check out the [package.json](./package.json) file and the docs for more information.
