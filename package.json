@@ -6,7 +6,7 @@
     "dev": "turbo dev",
     "build": "turbo build",
     "preview": "turbo preview",
-    "lint": "prettier . --write --cache --cache-location=.prettiercache"
+    "lint": "turbo lint"
   },
   "dependencies": {},
   "devDependencies": {
@@ -19,7 +19,7 @@
   ],
   "packageManager": "bun@0.0.0",
   "engines": {
-    "node": "^20",
+    "node": "^24",
     "bun": "^1"
   }
 }
