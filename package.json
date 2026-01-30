@@ -6,10 +6,12 @@
     "dev": "",
     "build": "",
     "preview": "",
-    "lint": ""
+    "lint": "prettier . --write --cache --cache-location=.prettiercache"
   },
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "prettier": "^3.8.1"
+  },
   "packageManager": "bun@0.0.0",
   "engines": {
     "node": "^20",
