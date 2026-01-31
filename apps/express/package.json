@@ -1,0 +1,26 @@
+{
+  "name": "@wds/express",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon ./src/index.js",
+    "preview": "node ./src/index.js",
+    "lint": "prettier . --write --cache --cache-location=.prettiercache && eslint . --fix --cache"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "eslint": "^9.39.2",
+    "globals": "^17.2.0",
+    "nodemon": "^3.1.11",
+    "prettier": "^3.8.1"
+  },
+  "packageManager": "bun@0.0.0",
+  "engines": {
+    "node": "^24",
+    "bun": "^1"
+  }
+}

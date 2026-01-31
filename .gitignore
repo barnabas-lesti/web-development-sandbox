@@ -1,4 +1,4 @@
 .turbo
 
 /node_modules
-.prettiercache
+/.prettiercache
