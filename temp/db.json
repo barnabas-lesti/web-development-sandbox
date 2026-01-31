@@ -1,0 +1,4 @@
+{
+  "activities": [{ "id": "1", "name": "Stash house" }],
+  "activityEntries": [{ "id": "999", "activityId": "1", "cash": "33000" }]
+}
