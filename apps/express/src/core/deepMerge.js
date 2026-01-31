@@ -1,1 +1,1 @@
-export * as deepMerge from "lodash.merge";
+export { default as deepMerge } from "lodash.merge";
