@@ -81,104 +81,125 @@ async function onDelete(event: SubmitEvent) {
 </script>
 
 <template>
-  <h1>Activities</h1>
+  <div class="p-4">
+    <h1>Activities</h1>
 
-  <h2>Create activity</h2>
-  <form @submit="onCreate">
-    <input
-      v-model="createActivity.name"
-      type="text"
-      placeholder="Name"
-    />
-    <input
-      type="submit"
-      name="Create"
-    />
-  </form>
+    <h2>Create activity</h2>
+    <form
+      class="flex flex-col gap-2"
+      @submit="onCreate"
+    >
+      <input
+        v-model="createActivity.name"
+        type="text"
+        placeholder="Name"
+        class="input w-full"
+      />
+      <input
+        type="submit"
+        value="Create"
+        class="btn"
+      />
+    </form>
 
-  <h2>Read activity</h2>
-  <form @submit="onRead">
-    <input
-      v-model="readId"
-      type="text"
-      placeholder="ID"
-    />
-    <input
-      type="submit"
-      name="Read"
-    />
-  </form>
-  <table v-if="readActivity">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>{{ readActivity.id }}</td>
-        <td>{{ readActivity.name }}</td>
-      </tr>
-    </tbody>
-  </table>
-  <p v-else>No activity to show.</p>
+    <h2>Read activity</h2>
+    <form @submit="onRead">
+      <input
+        v-model="readId"
+        type="text"
+        placeholder="ID"
+        class="input"
+      />
+      <input
+        type="submit"
+        value="Read"
+        class="btn"
+      />
+    </form>
+    <table
+      v-if="readActivity"
+      class="table"
+    >
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ readActivity.id }}</td>
+          <td>{{ readActivity.name }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <p v-else>No activity to show.</p>
 
-  <h2>Read activities</h2>
-  <form @submit="onReadAll">
-    <input
-      type="submit"
-      name="Read"
-    />
-  </form>
-  <table v-if="readActivities.length > 0">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr
-        v-for="activity in readActivities"
-        :key="activity.id"
-      >
-        <td>{{ activity.id }}</td>
-        <td>{{ activity.name }}</td>
-      </tr>
-    </tbody>
-  </table>
-  <p v-else>No activities to show.</p>
+    <h2>Read activities</h2>
+    <form @submit="onReadAll">
+      <input
+        type="submit"
+        value="Read"
+        class="btn"
+      />
+    </form>
+    <table
+      v-if="readActivities.length > 0"
+      class="table"
+    >
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          v-for="activity in readActivities"
+          :key="activity.id"
+        >
+          <td>{{ activity.id }}</td>
+          <td>{{ activity.name }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <p v-else>No activities to show.</p>
 
-  <h2>Update activity</h2>
-  <form @submit="onUpdate">
-    <input
-      v-model="updateActivity.id"
-      type="text"
-      placeholder="ID"
-    />
-    <input
-      v-model="updateActivity.name"
-      type="text"
-      placeholder="Name"
-    />
+    <h2>Update activity</h2>
+    <form @submit="onUpdate">
+      <input
+        v-model="updateActivity.id"
+        type="text"
+        placeholder="ID"
+        class="input"
+      />
+      <input
+        v-model="updateActivity.name"
+        type="text"
+        placeholder="Name"
+        class="input"
+      />
 
-    <input
-      type="submit"
-      name="Update"
-    />
-  </form>
+      <input
+        type="submit"
+        value="Update"
+        class="btn"
+      />
+    </form>
 
-  <h2>Delete activity</h2>
-  <form @submit="onDelete">
-    <input
-      v-model="deleteId"
-      type="text"
-      placeholder="ID"
-    />
-    <input
-      type="submit"
-      name="Delete"
-    />
-  </form>
+    <h2>Delete activity</h2>
+    <form @submit="onDelete">
+      <input
+        v-model="deleteId"
+        type="text"
+        placeholder="ID"
+        class="input"
+      />
+      <input
+        type="submit"
+        value="Delete"
+        class="btn"
+      />
+    </form>
+  </div>
 </template>

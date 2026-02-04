@@ -1,5 +1,14 @@
 {
-  "activities": [],
+  "activities": [
+    {
+      "id": "8060aacd-e628-4bd6-9669-e8df8a750fc0",
+      "name": "Test"
+    },
+    {
+      "id": "d542a386-59a2-4162-b9d4-8eefe5fd510c",
+      "name": "asdf"
+    }
+  ],
   "activityEntries": [
     {
       "id": "999",
